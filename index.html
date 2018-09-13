@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Szkolenie Front-End</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">Hello Front-End</a>
+      <button 
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="pages/modul1/modul1.html" class="nav-link">MODUŁ1</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/modul2/modul2.html" class="nav-link">MODUŁ2</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+                <a href="#" 
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown">
+                    <i class="far fa-arrow-alt-circle-down"></i> PLIKI POMOCNICZE
+                </a>
+                <div class="dropdown-menu">
+                  <a href="pages/download.html#css" class="dropdown-item">Moduł1 - HTML/STYLE</a>
+                  <a href="pages/download.html#bootstrap" class="dropdown-item">Moduł2 - BOOTSTRAP/JS</a>
+                </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SLIDER -->
+  <section class="main-wrapper bg-light p-4 d-none d-md-block">
+    <div class="container">
+      <div 
+      class="carousel slide"
+      data-ride="carousel"
+      id="mainCarousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://picsum.photos/1200/500?image=0" alt="slide-one" class="rounded img-fluid" class="d-block">
+          </div>
+  
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/500?image=1" alt="slide-two" class="rounded img-fluid" class="d-block">
+          </div>
+        </div>
+  
+        <ol class="carousel-indicators">
+          <li class="active" data-target="#mainCarousel" data-slide-to="0"></li>
+          <li data-target="#mainCarousel" data-slide-to="1"></li>
+        </ol>
+  
+        <a href="#mainCarousel" class="carousel-control-prev" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#mainCarousel" class="carousel-control-next" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <div class="section welcome-info mt-4">
+    <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="text-uppercase">Witam serdecznie</h5>
+            <p>
+              Z wielką przyjemnosćią pragnę zaprosić was do wspólnej zabawy oraz nauki.
+              Przez dwa dni będziemy uczyć się technik stosowanych na Froncie ;).
+            </p>
+            <p>
+              Kurs jest podzielony na dwa moduły:
+              <ul>
+                <li>Moduł1 - gdzie zapoznamy się z stylami w rożnej postaci: CSS3, SASS czy Flexbox</li>
+                <li>Moduł2 - W całosci przeznaczony będzie na poznanie Bootstrapa oraz konieczny wstęp do JS ( głownie jQuery na potrzeby bootstrap-a )</li>
+              </ul>
+            </p>
+            <hr>
+            
+            <div class="shadow-sm p-3 bg-white rounded text-center">
+              Nie przedłużając zapraszam do nauki ;)
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- OPTION CARDS -->
+  <section class="info-cards my-4 py-4 bg-light">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card text-center">
+              <div class="card-header">
+                <h5>MODUŁ1 - HTML/STYLE</h5>
+              </div>
+              <div class="card-body">
+                  <i class="fab fa-css3 fa-3x"></i>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline-secondary btn-md">WIĘCEJ</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card text-center">
+              <div class="card-header">
+                <h5>MODUŁ2 - BOOTSTRAP/JS</h5>
+              </div>
+              <div class="card-body">
+                  <i class="fas fa-book-open fa-3x"></i>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline-secondary btn-md">WIĘCEJ</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card text-center">
+              <div class="card-header">
+                <h5>MATERIAŁY DO POBRANIA</h5>
+              </div>
+              <div class="card-body">
+                  <i class="fas fa-arrow-circle-down fa-3x"></i>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline-secondary btn-md">WIĘCEJ</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer bg-dark p-4 text-white">
+    <div class="container">
+      <div class="row">
+         <div class="col text-center">
+           <span>Szkolenie Front-End &copy; 2018</span>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="js/vendor/popper.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+
+  <script>
+    //some script here
+  </script>
+</body>
+
+</html>

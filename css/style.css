@@ -1,0 +1,22 @@
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 70px; }
+  body .main-wrapper {
+    margin-top: 80px; }
+  body .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 70px; }
+  body .mainNav {
+    position: fixed;
+    top: 85px;
+    left: 20px;
+    width: 280px; }
+    body .mainNav .nav-item {
+      border-bottom: 1px solid #dedede; }
