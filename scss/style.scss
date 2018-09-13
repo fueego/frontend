@@ -5,7 +5,25 @@ html {
 
 body {
     .main-wrapper {
-        margin-top: 80px;
+        margin-top: 75px;
+
+        .mainMenu {
+            position: fixed;
+            z-index: 1;
+        }
+
+        .nav-item {
+            .dropdown {
+                .dropdown-item:active {
+                    background-color: transparent;
+                }
+
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 
     /* Margin bottom by footer height */

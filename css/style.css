@@ -6,7 +6,15 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 70px; }
   body .main-wrapper {
-    margin-top: 80px; }
+    margin-top: 75px; }
+    body .main-wrapper .mainMenu {
+      position: fixed;
+      z-index: 1; }
+    body .main-wrapper .nav-item .dropdown .dropdown-item:active {
+      background-color: transparent; }
+    body .main-wrapper .nav-item .dropdown a {
+      cursor: pointer;
+      text-decoration: none; }
   body .footer {
     position: absolute;
     bottom: 0;
