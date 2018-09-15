@@ -12,7 +12,7 @@
   <title>Szkolenie Front-End</title>
 </head>
 
-<>
+<body class="bg-light">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container">
             <a href="../../index.html" class="navbar-brand">Hello Front-End</a>
@@ -57,11 +57,15 @@
                     <ul class="nav rounded border mainMenu bg-white">
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a class="nav-link text-secondary" data-toggle="dropdown">jQuery (JS)</a>
+                                <a class="nav-link text-secondary active" data-toggle="dropdown">jQuery (JS)</a>
                                 <div class="dropdown-menu">
-                                    <div class="dropdown-item"><a href="#jquery" class="text-secondary">jQuery wprowadzenie</a></div>
+                                    <div class="dropdown-item">
+                                        <a href="#jqueryWprowadzenie" class="text-secondary">jQuery wprowadzenie</a>
+                                    </div>
                                     <div class="dropdown-divider"></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">JavaScript przykłady</a></div>
+                                    <div class="dropdown-item">
+                                        <a href="#jqueryPrzyklady" class="text-secondary">JavaScript przykłady</a>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -123,10 +127,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="row mt-2 pt-5">
+            <div class="row mt-2 pt-5" id="jqueryWprowadzenie">
                 <div class="col">
                     <section class="jquery">
-                        <h4 id="jquery" class="pl-2">jQuery wprowadzenie</h4>
+                        <h4 class="pl-2">jQuery wprowadzenie</h4>
                         <div class="card">
                             <div class="card-body">
                                 <p>
@@ -149,15 +153,23 @@
                                 ktory umożliwi nam odwołanie się do elementow drzewa DOM po załadowaniu zawartosci strony. Zgodnie z poniższym snipetem</p>
 <pre>
     <code>
-    //wersja 1
+    //wersja jQuery
     $(document).ready(function() {
         $( "p" ).last().css( "background-color", "red" );
     });
 
+    //wersja JavaScript
+    let paragraph = document.querySelector("p:last-of-type");
+    paragraph.style.background = "red";
+
     //wersja 2 - ta sama funkcjonalnosć, lecz oszczędniejsza w zapisie ;)
     $(function() {
-        $('#jquery').text().toUpperCase()
+        $("#jquery").text().toUpperCase()
     });
+
+    //wersja 2 JavaScript
+    let elem = document.querySelector("#jquery");
+    elem.style.textTransform = "upperCase";
 
     //wersja 3 - wykona się po całkowitym załadowaniu strony
     $(window).on("load", function() {
@@ -171,7 +183,7 @@
                                 </p>
 <pre>
     <code>
-        $('element').akcja('parametry');
+    $('element').akcja('parametry');
     </code>
 </pre>
                                 <p>
@@ -191,10 +203,42 @@
                                 <p>
                                     <em class="text-info">parametry</em> – jak sama nazwa wskazuje, wpisujemy tu parametry danej akcji.
                                 </p>
+
+                                <hr class="mt-4">
+
+                                Przykład zastosowania jQuery przy wspołpracy z komponentem Bootstrap:
+<pre>
+    <code>
+    //Dla przykładu przechwycimy event "show.bs.collapse", ktory pojawia się podczas kliknięcia w przycisk
+    $(function() {
+        //wywołamy akcję show na przycisku
+        $("#myCollapsedButton").on('click', () => {
+            $("#collapsePlace").collapse('toggle');
+        })
+    
+        //rejestrujemy akcję i sprzedajemy consol loga o zaistniałym fakcie
+        $("#collapsePlace").on('show.bs.collapse', function () {
+            console.log("I was touched :)");
+        }); 
+    });
+    </code>
+</pre>
+                                <p>
+                                    <button
+                                        id="myCollapsedButton"
+                                        class="btn btn-outline-primary"
+                                        data-target="#collapsePlace">
+                                        Click me please
+                                    </button>
+
+                                    <div class="collapse" id="collapsePlace">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, totam.
+                                    </div>
+                                </p>
                             </div>
                         </div>
 
-                        <h4 id="jsPrzyklady" class="pl-2 mt-4">JavaScript przykłady kodu zaimplementowane na stronie</h4>
+                        <h4 id="jqueryPrzyklady" class="pl-2 mt-4">JavaScript przykłady kodu zaimplementowane na stronie</h4>
                     </section>
                 </div>
             </div>
@@ -205,11 +249,26 @@
     <script src="../../js/vendor/popper.min.js"></script>
     <script src="../../js/vendor/bootstrap.min.js"></script>
     <script src="../../js/highlight.pack.js"></script>
+    <script src="../../js/module2examples.js"></script>
 
     <script>
         $(document).ready(function() {
             $('pre code').each(function(i, block) {
                 hljs.highlightBlock(block);
+            });
+
+            //smooth scroll ;)
+            $('.nav a').on('click', (e) => {
+                e.preventDefault();
+                const hash = e.currentTarget.hash;
+
+                if(hash) {
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, () => {
+                        location.hash = this.hash
+                    })
+                }
             });
         });
     </script>
