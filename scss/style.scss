@@ -53,3 +53,7 @@ body {
         }
     }
 }
+
+xmp { margin: 5px 0; padding: 8px; }
+xmp:before { content: ""; display: inline-block; height: 1em; margin: 0 -5px -2em -5px; }
+

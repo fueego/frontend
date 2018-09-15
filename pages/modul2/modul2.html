@@ -60,28 +60,28 @@
                                 <a class="nav-link text-secondary active" data-toggle="dropdown">jQuery (JS)</a>
                                 <div class="dropdown-menu">
                                     <div class="dropdown-item">
-                                        <a href="#jqueryWprowadzenie" class="text-secondary">jQuery wprowadzenie</a>
+                                        <a href="./modul2.html#jqueryWprowadzenie" class="text-secondary">jQuery wprowadzenie</a>
                                     </div>
                                     <div class="dropdown-divider"></div>
                                     <div class="dropdown-item">
-                                        <a href="#jqueryPrzyklady" class="text-secondary">JavaScript przykłady</a>
+                                        <a href="./modul2.html#jqueryPrzyklady" class="text-secondary">JavaScript przykłady</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a class="nav-link text-secondary" data-toggle="dropdown">Bootstrap</a>
+                                <a href="javascript:void(0);" class="nav-link text-secondary" data-toggle="dropdown">Bootstrap</a>
                                 <div class="dropdown-menu">
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Wprowadzenie</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Co nowego?</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Konfiguracja</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Nagłowki – typografia</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Pozycjonowanie tekstu</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Pozycjonowanie elementow</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Marginesy, paddingi</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Kolory i tła</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Breakpointy</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#wprowadzenie" class="text-secondary">Wprowadzenie</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#coNowego" class="text-secondary">Co nowego?</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#konfiguracja" class="text-secondary">Konfiguracja</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#naglowki" class="text-secondary">Nagłowki – typografia</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#pozycjonowanieTekstu" class="text-secondary">Pozycjonowanie tekstu</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#pozcjonowanieElementow" class="text-secondary">Pozycjonowanie elementow</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#marginesy" class="text-secondary">Marginesy, paddingi</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#kolory" class="text-secondary">Kolory i tła</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#breakpointy" class="text-secondary">Breakpointy</a></div>
                                 </div>
                             </div>
                         </li>
@@ -248,30 +248,9 @@
     <script src="../../js/vendor/jquery-3.3.1.min.js"></script>
     <script src="../../js/vendor/popper.min.js"></script>
     <script src="../../js/vendor/bootstrap.min.js"></script>
-    <script src="../../js/highlight.pack.js"></script>
+    <script src="../../js/vendor/highlight.pack.js"></script>
     <script src="../../js/module2examples.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('pre code').each(function(i, block) {
-                hljs.highlightBlock(block);
-            });
-
-            //smooth scroll ;)
-            $('.nav a').on('click', (e) => {
-                e.preventDefault();
-                const hash = e.currentTarget.hash;
-
-                if(hash) {
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, () => {
-                        location.hash = this.hash
-                    })
-                }
-            });
-        });
-    </script>
+    <script src="../../js/general.js"></script>
 </body>
   
 </html>

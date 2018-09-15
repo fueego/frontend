@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/railscasts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Szkolenie Front-End</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a href="../../index.html" class="navbar-brand">Hello Front-End</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="../modul1/modul1.html" class="nav-link">MODUŁ1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">MODUŁ2</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                <i class="far fa-arrow-alt-circle-down"></i> PLIKI POMOCNICZE
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="../download.html#css" class="dropdown-item">Moduł1 - HTML/STYLE</a>
+                                <a href="../download.html#bootstrap" class="dropdown-item">Moduł2 - BOOTSTRAP/JS</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="nav rounded border mainMenu bg-white">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary active" data-toggle="dropdown">jQuery (JS)</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item">
+                                        <a href="./modul2.html#jqueryWprowadzenie" class="text-secondary">jQuery
+                                            wprowadzenie</a>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="dropdown-item">
+                                        <a href="./modul2.html#jqueryPrzyklady" class="text-secondary">JavaScript
+                                            przykłady</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Bootstrap</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="./bootstrap.html#wprowadzenie" class="text-secondary">Wprowadzenie</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#coNowego" class="text-secondary">Co
+                                            nowego?</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#konfiguracja" class="text-secondary">Konfiguracja</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#naglowki" class="text-secondary">Nagłowki
+                                            – typografia</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#pozycjonowanieTekstu" class="text-secondary">Pozycjonowanie
+                                            tekstu</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#pozcjonowanieElementow" class="text-secondary">Pozycjonowanie
+                                            elementow</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#marginesy" class="text-secondary">Marginesy,
+                                            paddingi</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#kolory" class="text-secondary">Kolory
+                                            i tła</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#breakpointy" class="text-secondary">Breakpointy</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Komponenty</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Navbar & Navs</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Carousel</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Jumbotron</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Buttons & Groups</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Dropdowns</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">List Groups</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Tooltips & Popovers</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Forms & Inputs</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Tables</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Pagination</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Cards</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Modals</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">ScrollSpy</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Grid & Flex</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Opis działania siatki</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Pozycjonowanie i
+                                            offset</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Klasy flexbox</a></div>
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Marginesy i
+                                            ustawianie kolejności</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Serwis WWW</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Konfiguracja
+                                            środowiska</a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-2 pt-5">
+                <div class="col">
+                    <section id="wprowadzenie">
+                        <h4 class="pl-2">Wprowadzenie</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Bootstrap jest to biblioteka stworzona przez programistow Twittera. W ogolnym
+                                    pojęciu jest to zestaw klas Css, ktore umożliwiają
+                                    budowanie "płynnych layoutow" z gotowych elementow. U podstaw Bootstrapa znajdziemy
+                                    Sass-a oraz czysty JS.
+                                </p>
+
+                                <p>
+                                    Interface Bootstrapa oparty jest na "gridzie" czyli siatce. Projektując stronę
+                                    internetową, całą dostępną przestrzeń dzielimy na
+                                    kontenery. Maksymalna ilosć kolumn przypadająca na jeden kontener wynosi 12.
+                                </p>
+
+                                <p>
+                                    Stosując odpowiednie klasy css, możemy dowolnie manipulować położeniem kolumn w
+                                    kontenerach, w poziomie jak i w pionie.
+                                    Dodatkowo Bootstrap zapewnia nam dosć swobodny podział ekranu w 4 progach
+                                    rozdzielczosci zwanymi breakpointami.
+                                </p>
+
+                                <p>
+                                    Podstawowe progi rozdzielczosci dostarczone z Bootstrapem dostępne są począwszy od
+                                    najmniejszych urządzeń mobilnych
+                                    ( <span class="text-info">min-widht: 576px</span> ), przez tablety ( <span class="text-info">min-width:
+                                        768px</span> ),
+                                    do normalnych monitorow ( <span class="text-info">min-width: 992px</span> ),
+                                    kończąc na ( <span class="text-info">min-width: 1200px</span> )
+                                    i większych rozdzielczosciach.
+                                </p>
+
+                                <p>
+                                    Generalnie korzystając z Bootstrapa możemy szybko i bezbolesnie stworzyć w pełni
+                                    zorganizowaną stronę internetową, ktora będzie
+                                    bardzo dobrze się skalowała na rożnych urządzeniach a zastosowane komponenty będą
+                                    wyswietlały się w ten sam sposob w rożnych przeglądarkach
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="coNowego">
+                        <h4 class="pl-2 mt-4">Co nowego w Bootstrap 4.x</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Dla tych, którzy mieli już własne doswiadczenia z Bootstrapem, pokrotce przedstawię
+                                    istotne nowosci wczesniej niedostępne w wersji 3.x
+                                </p>
+
+                                <p>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            Zmieniony design - flat style, więcej klas kolorow, nowy wygląd buttonow -
+                                            btn-outline-...
+                                        </li>
+                                        <li class="list-group-item">
+                                            Dodanie jednostek <span class="text-info">rem, em</span> zamiast px,
+                                            dodatkowy breakpoint <span class="text-info">-xl</span>, siatka oparta o
+                                            flexbox
+                                        </li>
+                                        <li class="list-group-item">
+                                            Implementacja nowego komponentu <span class="text-info">CARD</span>, ktore
+                                            zastąpią panele oraz komponenty typu thumbnails
+                                        </li>
+                                        <li class="list-group-item">
+                                            Stosowanie komend <span class="text-info">flexbox</span> zamiast floatow,
+                                            zaprzestano stosowania klasy .form-horizontal.
+                                            Stosowanie form-control-lg, form-control-sm dla zwiększenia bądz
+                                            zmniejszenia wielkosci elementu input.
+                                        </li>
+                                        <li class="list-group-item">
+                                            Zmiana silnika z <span class="text-info">Less</span> na <span class="text-info">Sass</span>
+                                            Zastosowanie Libsass w celach kompilacji.
+                                        </li>
+                                        <li class="list-group-item">
+                                            Brak wsparcia dla IE8, IE9. Rekomendacja zmiany glyphicons na Font-awesome.
+                                            Dodano klasy dla zmiany wielkosci oraz odstępy.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="konfiguracja">
+                        <h4 class="pl-2 mt-4">Podstawowa konfiguracja</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Poniżej opiszę podstawową konfigurację, niezbędną do rozpoczęcia pracy z
+                                    Bootstrapem
+                                </p>
+
+                                <p>
+                                    Podstawowa implementacja Bootstrapa zawiera 4 pliki:
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span class="text-info">bootstrap.min.css</span> : niezbędny plik,
+                                            zawierający zminimalizowaną wersję styli dla siatki oraz komponentow.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="text-info">jquery-3.3.1.slim.min.js</span> : wiele
+                                            komponentow, bootstrapa korzysta u podstaw z jQuery.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="text-info">popper.min.js</span> : biblioteka napisana w
+                                            standardzie ES6. Wspiera wszelkiej masci tooltipy, popovery.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="text-info">bootstrap.min.js</span> : interaktywny klej dla
+                                            Bootstrapowych styli oraz elementów html.
+                                        </li>
+                                    </ul>
+                                </p>
+
+                                <hr>
+
+                                <p>
+                                    Jeżeli chcemy mieć więcej kontroli nad stylami css, możemy sciągnąć paczkę ze
+                                    zródłami.
+                                    (wszystkie style podzielone są na bazę oraz _mixiny, gdzie w łatwy sposób możemy
+                                    edytować to czego chcemy)
+                                </p>
+
+                                <p>
+                                    Paczkę ze zródłami, możemy pobdać bezposrednio od producenta ;) <br>
+                                    <a href="https://getbootstrap.com/docs/4.1/getting-started/download/#source-files"
+                                        class="text-info" target="_blank"> <i class="fas fa-download"></i> Get me here
+                                        :) </a>
+                                </p>
+
+                                <p>
+                                    Do kompilacji Bootstrapa ze zródeł, możemy zastosować darmowy kompilator o nazwie
+                                    Koala
+                                    <br>
+                                    <a href="http://koala-app.com/" class="text-info" target="_blank"> <i class="fas fa-download"></i>
+                                        koala-app </a>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="naglowki">
+                        <h4 class="pl-2 mt-4">Nagłówki & Typografia</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Jak wiadomo dla nagłówków, smiało można zastosować elementy html h1, h2, h3 etc.
+                                    Bootstrap poszedł o krok dalej i na starcie mamy
+                                    do dyspozycji klasę <span class="text-info">".display-1"</span> w zasięgu od 1 do 4
+                                </p>
+
+                                <p>
+                                    <h1 class="display-4">Display 4</h1>
+                                    <h1 class="display-3">Display 3</h1>
+                                    <h1 class="display-2">Display 2</h1>
+                                    <h1 class="display-1">Display 1</h1>
+                                </p>
+
+                                <hr class="my-5">
+
+                                <p>
+                                    W celu wyróżnienia akapitów pod tytułami z pomocą przychodzi nam klasa <span class="text-info">".lead"</span>
+                                </p>
+
+                                <h4 class="pt-4">
+                                    Przykładowy tytuł a pod nim akapit wyróżniający
+                                </h4>
+                                <p class="lead">Lorem ipsum dolor sit amet.</p>
+
+                                <hr class="my-5">
+
+                                <p>Operacje na tekscie bez koniecznosci pisania css, tak i owszem.</p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        Efekt typu <span class="text-info">highlight</span>
+                                        <pre><code>Lorem ipsum &lt;mark>dolor&lt;/mark> sit amet.</code></pre>
+                                        Lorem ipsum <mark>dolor</mark> sit amet.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Efekt typu <span class="text-info">przekreslenie</span>
+                                        <pre><code>&lt;s>Lorem ipsum dolor&lt;/s> sit amet.</code></pre>
+                                        <s>Lorem ipsum dolor</s> sit amet.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Efekt typu <span class="text-info">podkreslenie</span>
+                                        <pre><code>&lt;u>Lorem ipsum dolor&lt;/u> sit amet.</code></pre>
+                                        <u>Lorem ipsum dolor</u> sit amet.
+                                    </li>
+                                </ul>
+
+                                <hr class="my-5">
+
+                                <p>Przypisy, lub cytaty</p>
+                                <pre>
+    <code>
+&lt;blockquote class="blockquote">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officiis.
+    &lt;footer class="blockquote-footer">osoba xyz&lt;/footer>
+&lt;/blockquote>
+    </code>
+</pre>
+                                <blockquote class="blockquote">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                                        officiis.</p>
+                                    <footer class="blockquote-footer">osoba xyz</footer>
+                                </blockquote>
+
+                                <hr class="my-5">
+
+                                <p>
+                                    Listy, tutaj sądzę, że warto zapoznać się z klasą <span class="text-info">".list-unstyled"</span>.
+                                    Klasa ta szybko i sprawnie usuwa defaultowe stylowanie listy
+                                </p>
+
+                                <p>
+                                    Kolejnym zestawem klas wartym uwagi jest <span class="text-info">".list-inline"</span>
+                                    oraz <span class="text-info">".list-inline-item"</span>
+                                    Dzięki tym klasą szybko ułożymy listę w poziomie (np, na potrzeby navigacji)
+                                </p>
+
+                                <pre>
+                                        <code>
+&lt;ul class="list-inline">
+    &lt;li class="list-inline-item">Pierwszy link&lt;/li>
+    &lt;li class="list-inline-item">Drugi link&lt;/li>
+    &lt;li class="list-inline-item">Trzeci link&lt;/li>
+&lt;/ul>
+                                        </code>
+                                    </pre>
+
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">Pierwszy link</li>
+                                    <li class="list-inline-item">Drugi link</li>
+                                    <li class="list-inline-item">Trzeci link</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="pozycjonowanieTekstu">
+                        <h4 class="pl-2 mt-4">Pozycjonowanie tekstu</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Tym razem zajmiemy się pozycjonowaniem tekstu.
+                                    W pierwszej kolejnosci pozycjonujemy tekst ogólnie:
+                                </p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="text-info">".text-left"</span>
+                                        <p class="text-left">Lorem ipsum dolor sit amet.</p>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <span class="text-info">".text-center"</span>
+                                        <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <span class="text-info">".text-right"</span>
+                                        <p class="text-right">Lorem ipsum dolor sit amet.</p>
+                                    </li>
+                                </ul>
+
+                                <hr class="my-5">
+
+                                <p>
+                                    Tekst, również możemy sformatować w pionie, przykład poniżej:
+                                </p>
+
+                                <pre>
+                                        <code>
+&lt;span class="align-baseline">Lorem&lt;/span>
+&lt;span class="align-top">ipsum&lt;/span>
+&lt;span class="align-bottom">dolor&lt;/span>
+&lt;span class="align-middle">sit&lt;/span>
+&lt;span class="align-text-pop">amet&lt;/span>
+&lt;span class="align-text-bottom">consectetur&lt;/span>
+adipisicing elit.
+                                        </code>
+                                    </pre>
+
+                                <span class="align-baseline">Lorem</span>
+                                <span class="align-top">ipsum</span>
+                                <span class="align-bottom">dolor</span>
+                                <span class="align-middle">sit</span>
+                                <span class="align-text-pop">amet</span>
+                                <span class="align-text-bottom">consectetur</span>
+                                adipisicing elit.
+
+                                <hr class="my-5">
+
+                                <p>Zamiana elementów blokowych w liniowe</p>
+
+                                <pre><code>
+&lt;h2 class="d-inline bg-warning">To są&lt;/h2>
+&lt;h2 class="d-inline bg-info">Dwa elementy blokowe&lt;/h2>
+                                    </code></pre>
+
+                                <h2 class="d-inline bg-warning">To są</h2>
+                                <h2 class="d-inline bg-info">Dwa elementy blokowe</h2>
+
+                                <hr class="my-5">
+
+                                <p>Zamiana elementów liniowych w blokowe</p>
+
+                                <pre><code>
+&lt;h2 class="d-block bg-danger">To są&lt;/h2>
+&lt;h2 class="d-block bg-success">Dwa elementy blokowe&lt;/h2>
+                                    </code></pre>
+
+                                <span class="d-block bg-light">To są</span>
+                                <span class="d-block bg-secondary">Dwa elementy liniowe</h2>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="pozcjonowanieElementow">
+                        <h4 class="pl-2 mt-4">Pozycjonowanie elementów</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Zastosowanie ogólne opcji float
+                                </p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="text-info">".float-left"</span>
+                                        <p class="float-left">Lorem ipsum dolor sit amet.</p>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <span class="text-info">".float-right"</span>
+                                        <p class="float-right">Lorem ipsum dolor sit amet.</p>
+                                    </li>
+                                </ul>
+
+                                <hr class="my-5">
+
+                                <p>
+                                    Responsywne zastosowanie opcji float
+                                </p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="text-info">".float-sm-right"</span>
+                                        <p class="float-sm-right float-md-left">Lorem ipsum dolor sit amet.</p>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <span class="text-info">".float-xl-right"</span>
+                                        <p class="float-xl-right">Lorem ipsum dolor sit amet.</p>
+                                    </li>
+                                </ul>
+
+                                <hr class="my-5">
+
+                                <p>
+                                    Problem z tłem podczas stosowania floatów
+                                </p>
+
+                                <pre><code>
+Dodanie wbudowanej klasy .clearfix, pomaga rozwiązać problem
+&lt;div class="floatPlace bg-secondary text-white clearfix">
+    &lt;h3 class="float-left">Lewa&lt;/h3>
+    &lt;h3 class="float-right">Prawa&lt;/h3>
+&lt;/div>
+                                    </code></pre>
+
+                                <div class="floatPlace bg-secondary text-white clearfix">
+                                    <h3 class="float-left">Lewa</h3>
+                                    <h3 class="float-right">Prawa</h3>
+                                </div>
+
+                                <hr class="my-5">
+
+                                <p>
+                                    Pozycja fixed-top
+                                </p>
+
+                                <pre><code>
+&lt;h3 class="fixed-top text-danger">Pozycja fixed-top&lt;/h3>
+                                </code></pre>
+
+                                <h3 class="ffixed-top text-danger">Pozycja fixed-top</h3>
+
+                                <hr class="my-5">
+
+                                <p>
+                                    Pozycja sticky
+                                </p>
+
+                                <pre><code>
+&lt;h3 class="sticky-top text-danger">Pozycja sticky-top&lt;/h3>
+                                    </code></pre>
+
+                                <h3 class="ssticky-top text-danger" style="z-index: 99999">Pozycja sticky-top</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate
+                                    recusandae asperiores nesciunt cum repellat ex? Praesentium non, hic ipsa atque
+                                    eaque corrupti eligendi facere placeat consequatur dolorem voluptates nisi in
+                                    corporis odit nemo, delectus repudiandae quibusdam mollitia quos dolore expedita
+                                    sequi, consequuntur tempore? Nostrum magnam nam officiis minima labore?
+                                </p>
+
+                                <hr class="my-5">
+
+                                <p>
+                                    Pozycja fixed-bottom
+                                </p>
+
+                                <pre><code>
+&lt;h3 class="fixed-bottom text-danger">Pozycja fixed-bottom&lt;/h3>
+                                </code></pre>
+
+                                <h3 class="ffixed-bottom text-danger">Pozycja fixed-bottom</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="marginesy">
+                        <h4 class="pl-2 mt-4">Margines & Padding</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    W tej sekcji zaznajomimy się z klasami do stosowania marginesów i paddingów
+                                </p>
+
+                                <p>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">.mt-1 lub .pt-1 odpowiada odstępowi <span class="text-info">1rem * .25</span></li>
+                                        <li class="list-group-item">.mt-2 lub .pt-2 odpowiada odstępowi <span class="text-info">1rem * .5</span></li>
+                                        <li class="list-group-item">.mt-3 lub .pt-3 odpowiada odstępowi <span class="text-info">1rem</span></li>
+                                        <li class="list-group-item">.mt-4 lub .pt-4 odpowiada odstępowi <span class="text-info">1rem * 1.5</span></li>
+                                        <li class="list-group-item">.mt-5 lub .pt-5 odpowiada odstępowi <span class="text-info">1rem * 3</span></li>
+                                    </ul>
+                                </p>
+
+                                <p>Margines od góry</p>
+
+                                <p class="bg-secondary text-white mt-1">przykład mt-1</p>
+                                <p class="bg-secondary text-white mt-2">przykład mt-2</p>
+                                <p class="bg-secondary text-white mt-3">przykład mt-3</p>
+                                <p class="bg-secondary text-white mt-4">przykład mt-4</p>
+                                <p class="bg-secondary text-white mt-5">przykład mt-5</p>
+
+                                <p>Margines od dołu</p>
+
+                                <p class="bg-secondary text-white mb-1">przykład mb-1</p>
+                                <p class="bg-secondary text-white mb-2">przykład mb-2</p>
+                                <p class="bg-secondary text-white mb-3">przykład mb-3</p>
+                                <p class="bg-secondary text-white mb-4">przykład mb-4</p>
+                                <p class="bg-secondary text-white mb-5">przykład mb-5</p>
+
+                                <p>Mix marginesów</p>
+
+                                <p class="bg-secondary text-white ml-3">margines z lewj ml-3</p>
+                                <p class="bg-secondary text-white mr-3">margines z prawej mr-3</p>
+                                <p class="bg-secondary text-white mx-3">margines z lewej i prawej mx-3</p>
+                                <p class="bg-secondary text-white my-5">margines z góry i dołu my-5</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="kolory">
+                        <h4 class="pl-2 mt-4">Kolory w Bootstrapie</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Chodz i pomaluj mój swiat :). Innymi słowy podstawowe kolory w Bootstrapie
+                                </p>
+
+                                <div class="alert alert-primary P-4">
+                                    <span class="text-uppercase">primary</span>
+                                </div>
+
+                                <div class="alert alert-secondary P-4">
+                                    <span class="text-uppercase">secondary</span>
+                                </div>
+
+                                <div class="alert alert-warning P-4">
+                                    <span class="text-uppercase">warning</span>
+                                </div>
+
+                                <div class="alert alert-info P-4">
+                                    <span class="text-uppercase">info</span>
+                                </div>
+
+                                <div class="alert alert-danger P-4">
+                                    <span class="text-uppercase">danger</span>
+                                </div>
+
+                                <div class="alert alert-light P-4">
+                                    <span class="text-uppercase">light</span>
+                                </div>
+
+                                <div class="alert alert-success P-4">
+                                    <span class="text-uppercase">success</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="kolory">
+                        <h4 class="pl-2 mt-4">Breakpointy - progi</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Bootstrap w swojej podstawowej konfiguracji zezwala na manipulację siatką oraz elementami w przestrzeni 4 brakpointów, podziałów.
+                                </p>
+
+                                <p>
+                                    Breakpointy to nic innego jak predefiniowane <span class="text-info">media-query</span> z ustawionymi odpowiednimi wartosciami.
+                                </p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="text-info">prefix *-sm</span> odpowiada <span class="text-info">@media (min-width: 576px)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="text-info">prefix *-md</span> odpowiada <span class="text-info">@media (min-width: 768px)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="text-info">prefix *-lg</span> odpowiada <span class="text-info">@media (min-width: 992px)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="text-info">prefix *-xl</span> odpowiada <span class="text-info">@media (min-width: 1200px)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="../../js/vendor/jquery-3.3.1.min.js"></script>
+<script src="../../js/vendor/popper.min.js"></script>
+<script src="../../js/vendor/bootstrap.min.js"></script>
+<script src="../../js/vendor/highlight.pack.js"></script>
+<script src="../../js/module2examples.js"></script>
+<script src="../../js/general.js"></script>
+</body>
+
+</html>
