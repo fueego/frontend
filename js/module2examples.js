@@ -17,4 +17,10 @@ $(function() {
     $('button#nastepny').on('click', () => {
         $('#slider').carousel('next');
     });
+
+    //aktywacja tooltipa
+    $('[data-toggle="tooltip"]').tooltip();
+
+    //aktywacja popovera
+    $('[data-toggle="popover"]').popover();
 });

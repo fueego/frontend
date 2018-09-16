@@ -474,15 +474,6 @@ $('button#nastepny').on('click', () => {
 
                     <section id="lists">
                         <h4 class="pl-2 mt-4">List Groups</h4>
-                        <div class="card">
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="lists">
-                        <h4 class="pl-2 mt-4">List Groups</h4>
                         <ul class="card">
                             <div class="card-body">
                                 <p>W celu stworzenia bocznego menu, lub wylistowania jakichs detali, z pomocą przychodzi nam komponent <span class="text-info">list-group</span></p>
@@ -503,7 +494,6 @@ $('button#nastepny').on('click', () => {
                                     <div class="list-group-item">List item nr.3</div>
                                     <div class="list-group-item">List item nr.4</div>
                                 </div>
-                            </div>
 
                             <hr>
 
@@ -542,6 +532,731 @@ $('button#nastepny').on('click', () => {
                             </ul>
                         </div>
                     </section>
+
+                    <section id="tooltips">
+                        <h4 class="pl-2 mt-4">Tooltips & Popovers</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Szybka wiadomosć dla usera po najechaniu myszką na element html już możliwa dzięki komponentowi tooltip
+                                </p>
+
+                                <p>W celu aktywacji tooltipów, należy najpierw je zainicjować, stosując do tego jQuery</p>
+
+                                <pre><code>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+                                </code></pre>
+
+                                <pre><code>
+&lt;div class="btn-group">
+    &lt;button 
+        class="btn btn-danger"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="tooltip msg">
+        tooltip top
+    &lt;/button>
+
+    &lt;button 
+        class="btn btn-success"
+        data-toggle="tooltip"
+        data-placement="bottom"
+        title="tooltip msg">
+        tooltip bottom
+    &lt;/button>
+
+    &lt;button 
+        class="btn btn-dark"
+        data-toggle="tooltip"
+        data-placement="left"
+        title="tooltip msg">
+        tooltip left
+    &lt;/button>
+
+    &lt;button 
+        class="btn btn-warning"
+        data-toggle="tooltip"
+        data-placement="right"
+        title="tooltip msg">
+        tooltip right
+    &lt;/button>
+&lt;/div>
+                                </code></pre>
+
+                                <div class="btn-group">
+                                    <button 
+                                        class="btn btn-danger"
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                        title="tooltip msg">
+                                        tooltip top
+                                    </button>
+
+                                    <button 
+                                        class="btn btn-success"
+                                        data-toggle="tooltip"
+                                        data-placement="bottom"
+                                        title="tooltip msg">
+                                        tooltip bottom
+                                    </button>
+
+                                    <button 
+                                        class="btn btn-dark"
+                                        data-toggle="tooltip"
+                                        data-placement="left"
+                                        title="tooltip msg">
+                                        tooltip left
+                                    </button>
+
+                                    <button 
+                                        class="btn btn-warning"
+                                        data-toggle="tooltip"
+                                        data-placement="right"
+                                        title="tooltip msg">
+                                        tooltip right
+                                    </button>
+                                </div>
+
+                                <hr>
+
+                                <p>W celu aktywacji popoverów, należy najpierw je zainicjować, stosując do tego jQuery podobnie jak przy tooltipach</p>
+
+                                <pre><code>
+$(function () {
+    $('[data-toggle="popover"]').popover()
+})
+                                </code></pre>
+
+                                <pre><code>
+&lt;div class="btn-group">
+    &lt;button 
+        class="btn btn-primary"
+        data-toggle="popover"
+        data-container="body"
+        data-placement="top"
+        data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatibus!"
+        title="extra title">
+        Popover top 
+    &lt;/button>
+
+    &lt;button 
+        class="btn btn-primary"
+        data-toggle="popover"
+        data-container="body"
+        data-placement="bottom"
+        data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatibus!"
+        title="extra title">
+        Popover bottom
+    &lt;/button>
+
+    &lt;button 
+        class="btn btn-primary"
+        data-toggle="popover"
+        data-container="body"
+        data-placement="left"
+        data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatibus!"
+        title="extra title">
+        Popover left
+    &lt;/button>
+
+    &lt;button 
+        class="btn btn-primary"
+        data-toggle="popover"
+        data-container="body"
+        data-placement="right"
+        data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatibus!"
+        title="extra title">
+        Popover right
+    &lt;/button>
+&lt;/div>
+                                </code></pre>
+
+                                <div class="btn-group">
+                                    <button 
+                                        class="btn btn-primary"
+                                        data-toggle="popover"
+                                        data-container="body"
+                                        data-placement="top"
+                                        data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatibus!"
+                                        title="extra title">
+                                        Popover top 
+                                    </button>
+
+                                    <button 
+                                        class="btn btn-primary"
+                                        data-toggle="popover"
+                                        data-container="body"
+                                        data-placement="bottom"
+                                        data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatibus!"
+                                        title="extra title">
+                                        Popover bottom
+                                    </button>
+
+                                    <button 
+                                        class="btn btn-primary"
+                                        data-toggle="popover"
+                                        data-container="body"
+                                        data-placement="left"
+                                        data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatibus!"
+                                        title="extra title">
+                                        Popover left
+                                    </button>
+
+                                    <button 
+                                        class="btn btn-primary"
+                                        data-toggle="popover"
+                                        data-container="body"
+                                        data-placement="right"
+                                        data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatibus!"
+                                        title="extra title">
+                                        Popover right
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="forms">
+                        <h4 class="pl-2 mt-4">Forms & Inputs</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Formularze, kolejna często spotykana rzecz na stronach internetowych.</p>
+                                <p>Zacznijmy od prostego przykładu gdzie pole typu input będzie miało labelkę i przypis</p>
+
+                                <pre><code>
+&lt;form>
+    &lt;div class="form-group">
+        &lt;label for="name">Wpisz swoje imię&lt;/label>
+        &lt;input type="text" id="name" class="form-control" placeholder="Imię...">
+        &lt;small class="form-text text-muted">Zapomnij na chwilę o RODO :)&lt;/small>
+    &lt;/div>
+&lt;/form>
+                                </code></pre>
+
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Wpisz swoje imię</label>
+                                        <input type="text" id="name" class="form-control" placeholder="Imię...">
+                                        <small class="form-text text-muted">Zapomnij na chwilę o RODO :)</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Wpisz swoje nazwisko</label>
+                                        <input type="text" id="name" class="form-control" placeholder="Imię...">
+                                        <small class="form-text text-muted">Zapomnij na chwilę o RODO :)</small>
+                                    </div>
+
+                                    <button class="btn btn-primary btn-block">Zapisz</button>
+                                </form>
+
+                                <hr class="my-4">
+
+                                <p>Formularz w jednej linii</p>
+
+                                <pre><code>
+&lt;form class="form-inline bg-light p-2">
+    &lt;div class="form-group mr-2">
+        &lt;input type="text" id="name" class="form-control" placeholder="Podaj imię...">
+    &lt;/div>
+    &lt;div class="form-group mr-2">
+        &lt;input type="text" id="nazwisko" class="form-control" placeholder="Podaj nazwisko...">
+    &lt;/div>
+    &lt;div class="form-group">
+        &lt;button class="btn btn-primary" type="submit">Zapisz&lt;/button>
+    &lt;/div>
+&lt;/form>
+                                </code></pre>
+
+                                <form class="form-inline bg-light p-2">
+                                    <div class="form-group mr-2">
+                                        <input type="text" id="name" class="form-control" placeholder="Podaj imię...">
+                                    </div>
+                                    <div class="form-group mr-2">
+                                        <input type="text" id="nazwisko" class="form-control" placeholder="Podaj nazwisko...">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" type="submit">Zapisz</button>
+                                    </div>
+                                </form>
+
+                                <hr class="my-4">
+
+                                <p>Siatka dla formularza, w celu pogrupowania formularza, możemy posiłkować się klasą <span class="text-info">".col"</span></p>
+
+                                <pre><code>
+&lt;form>
+    &lt;div class="row">
+        &lt;div class="col">
+            &lt;div class="form-group">
+                &lt;input type="text" placeholder="wpis nr 1" class="form-control">
+            &lt;/div>
+        &lt;/div>
+
+        &lt;div class="col">
+            &lt;div class="form-group">
+                &lt;input type="text" placeholder="wpis nr 2" class="form-control">
+            &lt;/div>
+        &lt;/div>
+
+        &lt;div class="col">
+            &lt;div class="form-group">
+                &lt;input type="text" placeholder="wpis nr 3" class="form-control">
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+
+    &lt;div class="row">
+        &lt;div class="col">
+            &lt;div class="form-group">
+                &lt;input type="text" placeholder="wpis nr 4" class="form-control">
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+
+    &lt;div class="row">
+        &lt;div class="col">
+            &lt;button class="btn btn-primary btn-block">Zapisz&lt;/button>
+        &lt;/div>
+    &lt;/div>
+&lt;/form>
+                                </code></pre>
+                                
+                                <form>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="wpis nr 1" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="wpis nr 2" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="wpis nr 3" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="wpis nr 4" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-primary btn-block">Zapisz</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <hr class="my-4">
+
+                                <p>Zamiennie możemy stosować <span class="text-info">".form-row"</span> zamiast <span class="text-info">".row"</span></p>
+                                <p>Natomiast do <span class="text-info">".col-x"</span> gdzie x może być liczbą od 1 do 12</p>
+
+                                <pre><code>
+&lt;form>
+    &lt;div class="form-row">
+        &lt;div class="col-4">
+            &lt;input type="text" class="form-control" placeholder="Imię">
+        &lt;/div>
+        &lt;div class="col-4">
+            &lt;input type="text" class="form-control" placeholder="Nazwisko">
+        &lt;/div>
+        &lt;div class="col-2">
+            &lt;input type="email" class="form-control" placeholder="email">
+        &lt;/div>
+    &lt;/div>
+&lt;/form>
+                                </code></pre>
+
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-4">
+                                            <input type="text" class="form-control" placeholder="Imię">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control" placeholder="Nazwisko">
+                                        </div>
+                                        <div class="col-2">
+                                            <input type="email" class="form-control" placeholder="email">
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-primary btn-block">Zapisz</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <hr class="my-4">
+
+                                <p>W formularzu, możemy stosować różne wielkosci inputów</p>
+
+                                <pre><code>
+&lt;div class="form-group">
+    &lt;input type="text" class="form-control form-control-sm mb-3" placeholder="form-control-sm">
+    &lt;input type="text" class="form-control form-control-md mb-3" placeholder="form-control-md">
+    &lt;input type="text" class="form-control form-control-lg" placeholder="form-control-lg">
+&lt;/div>
+                                </code></pre>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm mb-3" placeholder="form-control-sm">
+                                    <input type="text" class="form-control form-control-md mb-3" placeholder="form-control-md">
+                                    <input type="text" class="form-control form-control-lg" placeholder="form-control-lg">
+                                </div>
+
+                                <p>Mamy również możliwosć wygaszenia input-a</p>
+
+                                <pre><code>
+&lt;div class="form-group">
+    &lt;input class="form-control" type="text" placeholder="Tylko do odczytu…" readonly>
+&lt;/div>
+                                </code></pre>
+
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Tylko do odczytu…" readonly>
+                                </div>
+                            
+
+                            <hr class="my-4">
+
+                            <p>Formularze to nie tylko input typu text. Możemy zastosować całą resztę</p>
+
+                            <pre><code>
+&lt;div class="form-check">
+    &lt;input class="form-check-input" type="checkbox" value="" id="checkboxEx">
+    &lt;label class="form-check-label" for="checkboxEx"> Przykładowy checkbox &lt;/label>
+&lt;/div>
+                            </code></pre>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="checkboxEx">
+                                <label class="form-check-label" for="checkboxEx"> Przykładowy checkbox </label>
+                            </div>
+
+                            <pre><code>
+&lt;div class="form-check">
+    &lt;input class="form-check-input" type="radio" name="radioEx" id="radioEx" value="option1">
+    &lt;label class="form-check-label" for="radioEx"> Przykładowy radiobox &lt;/label>
+&lt;/div>
+                            </code></pre>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="radioEx" id="radioEx" value="option1">
+                                <label class="form-check-label" for="radioEx"> Przykładowy radiobox </label>
+                            </div>
+
+                            <hr>
+
+                            <p>Select box</p>
+
+                            <pre><code>
+&lt;form>
+    &lt;div class="form-row">
+        &lt;div class="col-auto my-1">
+            &lt;select class="form-control">
+                &lt;option>Wybierz...&lt;/option>
+                &lt;option value="1">Przykład 1&lt;/option>
+                &lt;option value="2">Przykład 2&lt;/option>
+                &lt;option value="3">Przykład 3&lt;/option>
+            &lt;/select>
+        &lt;/div>
+    &lt;/div>
+&lt;/form>
+                            </code></pre>
+
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-auto my-1">
+                                        <select class="form-control">
+                                            <option>Wybierz...</option>
+                                            <option value="1">Przykład 1</option>
+                                            <option value="2">Przykład 2</option>
+                                            <option value="3">Przykład 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <hr class="my-4">
+
+                            <p>Dla zagwarantowania poprawnosci wyswietlania możemy użyć klasy <span class="text-info">".custom-control"</span></p>
+
+                            <pre><code>
+//checkbox
+&lt;div class="custom-control custom-checkbox">
+    &lt;input type="checkbox" class="custom-control-input" id="checkobx1">
+    &lt;label class="custom-control-label" for="checkobx1">Custom checkbox&lt;/label>
+&lt;/div>
+
+//radio
+&lt;div class="custom-control custom-radio">
+    &lt;input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+    &lt;label class="custom-control-label" for="customRadio1">Custom Radio&lt;/label>
+&lt;/div>
+&lt;div class="custom-control custom-radio">
+    &lt;input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+    &lt;label class="custom-control-label" for="customRadio2">Custom Radio 2&lt;/label>
+&lt;/div>
+                            </code></pre>
+
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="checkobx1">
+                                <label class="custom-control-label" for="checkobx1">Custom checkbox</label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Custom Radio</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Custom Radio 2</label>
+                            </div>
+
+                            <pre><code>
+&lt;form-group>
+    &lt;label for="customRange1">Przykładowy range input&lt;/label>
+    &lt;input type="range" class="custom-range" id="customRange1">
+&lt;/form-group>
+                            </code></pre>
+
+                            <form-group>
+                                <label for="customRange1">Przykładowy range input</label>
+                                <input type="range" class="custom-range" id="customRange1">
+                            </form-group>
+
+                            <hr>
+
+                            <p>Czasem może się przydażyć, że chcemy zrobić upload</p>
+
+                            <pre><code>
+&lt;form>
+    &lt;div class="form-row">
+        &lt;div class="col-4">
+            &lt;div class="custom-file col-auto">
+                &lt;input type="file" class="custom-file-input" id="plik">
+                &lt;label class="custom-file-label" for="plik">Wybierz plik&lt;/label>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/form>
+                            </code></pre>
+
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-4">
+                                        <div class="custom-file col-auto">
+                                            <input type="file" class="custom-file-input" id="plik">
+                                            <label class="custom-file-label" for="plik">Wybierz plik</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <hr class="my-4">
+
+                            <p>OStatnia częsć formularzy ;) obiecuję - <span class="text-info">"Input group"</span></p>
+
+                            <p>Dekoracja z lewej</p>
+
+                            <pre><code>
+&lt;form>
+    &lt;div class="input-group">
+        &lt;div class="input-group-prepend">
+            &lt;span class="input-group-text">
+                &lt;i class="fas fa-user">&lt;/i>
+            &lt;/span>
+        &lt;/div>
+
+        &lt;input type="text" class="form-control" placeholder="Wpisz swoje imię">
+    &lt;/div>
+&lt;/form>
+                            </code></pre>
+
+                            <form>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </div>
+
+                                    <input type="text" class="form-control" placeholder="Wpisz swoje imię">
+                                </div>
+                            </form>
+
+                            <p class="mt-4">Dekoracja z prawej</p>
+
+                            <pre><code>
+&lt;form>
+    &lt;div class="input-group">
+        &lt;input type="text" class="form-control" placeholder="Wpisz swoje imię">
+
+        &lt;div class="input-group-append">
+            &lt;span class="input-group-text">
+                &lt;i class="fas fa-user">&lt;/i>
+            &lt;/span>
+        &lt;/div>
+    &lt;/div>
+&lt;/form>
+                            </code></pre>
+
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Wpisz swoje imię">
+
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </section>
+
+                    <section id="tables">
+                        <h4 class="pl-2 mt-4">Tabelki</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Jeżeli mamy dane tabelaryczne, to bootstrap również ma cos dla nas ;).</p>
+
+                                <pre><code>
+&lt;table class="table">
+    &lt;thead>
+        &lt;tr>
+            &lt;th scope="col">#&lt;/th>
+            &lt;th scope="col">Imię&lt;/th>
+            &lt;th scope="col">Nazwisko&lt;/th>
+            &lt;th scope="col">Imię&lt;/th>
+            &lt;th scope="col">Nazwisko&lt;/th>
+        &lt;/tr>
+    &lt;/thead>
+    &lt;tbody>
+        &lt;tr>
+            &lt;th scope="row">1&lt;/th>
+            &lt;td>Jakub&lt;/td>
+            &lt;td>Rakowski&lt;/td>
+            &lt;td>Jakub&lt;/td>
+            &lt;td>Rakowski&lt;/td>
+        &lt;/tr>
+        &lt;tr>
+            &lt;th scope="row">2&lt;/th>
+            &lt;td>Marcin&lt;/td>
+            &lt;td>Stokarski&lt;/td>
+            &lt;td>Marcin&lt;/td>
+            &lt;td>Stokarski&lt;/td>
+        &lt;/tr>
+    &lt;/tbody>
+&lt;/table>
+                                </code></pre>
+                                
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Imię</th>
+                                            <th scope="col">Nazwisko</th>
+                                            <th scope="col">Imię</th>
+                                            <th scope="col">Nazwisko</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Jakub</td>
+                                            <td>Rakowski</td>
+                                            <td>Jakub</td>
+                                            <td>Rakowski</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Marcin</td>
+                                            <td>Stokarski</td>
+                                            <td>Marcin</td>
+                                            <td>Stokarski</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <hr>
+
+                                <p>Responsywna wersja tabelki wygląda jak poniżej</p>
+
+                                <pre><code>
+&lt;div class="table-responsive-sm">
+    &lt;table class="table">
+        &lt;thead>
+            &lt;tr>
+                &lt;th scope="col">#&lt;/th>
+                &lt;th scope="col">Imię&lt;/th>
+                &lt;th scope="col">Nazwisko&lt;/th>
+                &lt;th scope="col">Imię&lt;/th>
+                &lt;th scope="col">Nazwisko&lt;/th>
+            &lt;/tr>
+        &lt;/thead>
+        &lt;tbody>
+            &lt;tr>
+                &lt;th scope="row">1&lt;/th>
+                &lt;td>Jakub&lt;/td>
+                &lt;td>Rakowski&lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;th scope="row">2&lt;/th>
+                &lt;td>Marcin&lt;/td>
+                &lt;td>Stokarski&lt;/td>
+            &lt;/tr>
+        &lt;/tbody>
+    &lt;/table>
+&lt;/div>
+                                </code></pre>
+
+                                <div class="table-responsive-sm">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Imię</th>
+                                                <th scope="col">Nazwisko</th>
+                                                <th scope="col">Imię</th>
+                                                <th scope="col">Nazwisko</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Jakub</td>
+                                                <td>Rakowski</td>
+                                                <td>Jakub</td>
+                                                <td>Rakowski</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Marcin</td>
+                                                <td>Stokarski</td>
+                                                <td>Marcin</td>
+                                                <td>Stokarski</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
             </div>
         </div>
     </div>
