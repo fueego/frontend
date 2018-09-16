@@ -7,5 +7,14 @@ $(function() {
     //rejestrujemy akcję i sprzedajemy consol loga o zaistniałym fakcie
     $("#collapsePlace").on('show.bs.collapse', function () {
         console.log("I was touched :)");
-    }); 
+    });
+
+    //sterowanie sliderem
+    $('button#poprzedni').on('click', () => {
+        $('#slider').carousel('prev');
+    });
+
+    $('button#nastepny').on('click', () => {
+        $('#slider').carousel('next');
+    });
 });
