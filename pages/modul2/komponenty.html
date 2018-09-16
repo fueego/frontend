@@ -1256,6 +1256,371 @@ $(function () {
                         </div>
                     </section>
 
+                    <section id="pagination">
+                        <h4 class="pl-2 mt-4">Paginacja</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Dla ostylowania paginacji, możemy zastosować komponent <span class="text-info">"pagination"</span></p>
+
+                                <pre><code>
+&lt;div class="paginacja">
+    &lt;ul class="pagination pagination-md">
+        &lt;li class="page-item disabled">
+            &lt;span class="page-link">Poprzednia&lt;/span>
+        &lt;/li>
+        &lt;li class="page-item">
+            &lt;span class="page-link">1&lt;/span>
+        &lt;/li>
+        &lt;li class="page-item active">
+            &lt;span class="page-link">2&lt;/span>
+        &lt;/li>
+        &lt;li class="page-item">
+            &lt;span class="page-link">Następna&lt;/span>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div>
+                                </code></pre>
+
+                                <p>W celu powiększenia, bądz pomniejszenia możemy zastosować odpowiednie klasy <span class="text-info">".pagination-*[lg, md, sm]"</span></p>
+
+                                <div class="paginacja">
+                                    <ul class="pagination pagination-md">
+                                        <li class="page-item disabled">
+                                            <span class="page-link">Poprzednia</span>
+                                        </li>
+                                        <li class="page-item">
+                                            <span class="page-link">1</span>
+                                        </li>
+                                        <li class="page-item active">
+                                            <span class="page-link">2</span>
+                                        </li>
+                                        <li class="page-item">
+                                            <span class="page-link">Następna</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="cards">
+                        <h4 class="pl-2 mt-4">Card</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Komponent Card, może być swietnie wykorzystany dla przedstawienia danych w kolumnach, jako post z nowosciami lub element budowlany dla lazy loadingu artykułów</p>
+                                <p>Poniżej przedstawie przykładowy component Card z grafiką na górze</p>
+
+                                <pre><code>
+&lt;div class="card">
+    &lt;img src="https://picsum.photos/250/150?image=38" alt="simple card" class="card-img-top img-fluid">
+    &lt;div class="card-body">
+        &lt;h4 class="card-title">Lorem ipsum&lt;/h4>
+        &lt;h6 class="card-subtitle text-muted">Sub lorem ipsum&lt;/h6>
+        &lt;hr>
+        &lt;p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor rerum facere, deleniti veniam illum sit.&lt;/p>
+    &lt;/div>
+    &lt;div class="card-footer">
+        &lt;button class="btn btn-outline-primary btn-block">Lorem ipsum&lt;/button>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="card">
+                                            <img src="https://picsum.photos/250/150?image=38" alt="simple card" class="card-img-top img-fluid">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Lorem ipsum</h4>
+                                                <h6 class="card-subtitle text-muted">Sub lorem ipsum</h6>
+                                                <hr>
+                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor rerum facere, deleniti veniam illum sit.</p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <button class="btn btn-outline-primary btn-block">Lorem ipsum</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <p>Element Card nie musi mieć wyłącznie zdjęcia, całkiem niezle prezentuje się z samym headerem</p>
+
+                                <pre><code>
+&lt;div class="card">
+    &lt;div class="card-header">Lorem Ipsum&lt;/div>
+    &lt;div class="card-body">
+        &lt;p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, nemo!&lt;/p>
+        &lt;p class="card-text">
+            &lt;small class="text-muted">Lorem ipsum dolor sit amet.&lt;/small>
+        &lt;/p>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="card">
+                                            <div class="card-header">Lorem Ipsum</div>
+                                            <div class="card-body">
+                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, nemo!</p>
+                                                <p class="card-text">
+                                                    <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <p>Jest jeszcze jedna b.ważna rzecz, która ułatwia życie. Poniższy przykład przedstawia komponenty <span class="text-info">card</span> tej samej wielkosci nie zależnie ile mają tresci</p>
+
+                                <pre><code>
+&lt;div class="card-deck">
+    &lt;div class="card">
+        &lt;img class="card-img-top" src="https://picsum.photos/250/150?image=45" alt="Card image cap">
+        &lt;div class="card-body">
+            &lt;h5 class="card-title">Lorem Ipsum&lt;/h5>
+            &lt;p class="card-text">Lorem ipsum dolor sit amet.&lt;/p>
+            &lt;p class="card-text">&lt;small class="text-muted">Last updated 9 mins ago&lt;/small>&lt;/p>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="card">
+        &lt;img class="card-img-top" src="https://picsum.photos/250/150?image=46" alt="Card image cap">
+        &lt;div class="card-body">
+            &lt;h5 class="card-title">Lorem Ipsum&lt;/h5>
+            &lt;p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dolorem!&lt;/p>
+            &lt;p class="card-text">&lt;small class="text-muted">Last updated 77 mins ago&lt;/small>&lt;/p>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="card">
+        &lt;img class="card-img-top" src="https://picsum.photos/250/150?image=47" alt="Card image cap">
+        &lt;div class="card-body">
+            &lt;h5 class="card-title">Lorem Ipsum&lt;/h5>
+            &lt;p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, autem unde. Voluptatum quibusdam temporibus in,
+                eligendi assumenda quae esse unde, dicta labore aut quisquam? Maiores!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, autem unde. Voluptatum quibusdam temporibus in,
+                eligendi assumenda quae esse unde, dicta labore aut quisquam? Maiores!
+            &lt;/p>
+            &lt;p class="card-text">&lt;small class="text-muted">Last updated 0 mins ago&lt;/small>&lt;/p>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
+                                <div class="card-deck">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://picsum.photos/250/150?image=45" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lorem Ipsum</h5>
+                                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 9 mins ago</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://picsum.photos/250/150?image=46" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lorem Ipsum</h5>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, dolorem!</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 77 mins ago</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://picsum.photos/250/150?image=47" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lorem Ipsum</h5>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, autem unde. Voluptatum quibusdam temporibus in, eligendi assumenda quae esse unde, dicta labore aut quisquam? Maiores!
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, autem unde. Voluptatum quibusdam temporibus in, eligendi assumenda quae esse unde, dicta labore aut quisquam? Maiores!
+                                            </p>
+                                            <p class="card-text"><small class="text-muted">Last updated 0 mins ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <p>Kolejną fajną rzeczą, która nie stanowi problemu to zastosowanie komponentu <span class="text-info">card</span> imitującego efekt pluginu <span class="text-info">Masonry</span></p>
+
+                                <pre><code>
+&lt;div class="card-columns">
+    &lt;div class="card">
+        &lt;img class="card-img-top" src="https://picsum.photos/250/150?image=46" alt="lorem">
+        &lt;div class="card-body">
+            &lt;h5 class="card-title">Lorem, ipsum dolor.&lt;/h5>
+            &lt;p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, beatae.&lt;/p>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="card p-3">
+        &lt;blockquote class="blockquote mb-0 card-body">
+            &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p>
+            &lt;footer class="blockquote-footer">
+                &lt;small class="text-muted">
+                Lorem ipsum dolor sit amet.
+                &lt;/small>
+            &lt;/footer>
+        &lt;/blockquote>
+    &lt;/div>
+    &lt;div class="card">
+        &lt;div class="card-body">
+            &lt;h5 class="card-title">Lorem Ipsum&lt;/h5>
+            &lt;p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, quaerat?&lt;/p>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="card bg-primary text-white text-center p-3">
+        &lt;blockquote class="blockquote mb-0">
+            &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.&lt;/p>
+        &lt;/blockquote>
+    &lt;/div>
+    &lt;div class="card text-center bg-warning">
+        &lt;div class="card-body">
+        &lt;h5 class="card-title">lorem&lt;/h5>
+        &lt;p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, tempora.&lt;/p>
+        &lt;/div>
+    &lt;/div>
+    
+    &lt;div class="card p-3 text-right">
+        &lt;blockquote class="blockquote mb-0">
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p>
+        &lt;footer class="blockquote-footer">
+            &lt;small class="text-muted">
+            Someone famous in &lt;cite title="Source Title">Source Title&lt;/cite>
+            &lt;/small>
+        &lt;/footer>
+        &lt;/blockquote>
+    &lt;/div>
+    &lt;div class="card">
+        &lt;div class="card-body">
+        &lt;h5 class="card-title">Lorem ipsum dolor sit amet.&lt;/h5>
+        &lt;p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nemo soluta autem nisi cupiditate accusantium? Necessitatibus placeat distinctio ratione adipisci voluptate.&lt;/p>
+        &lt;p class="card-text">&lt;small class="text-muted">Lorem ipsum dolor sit amet.&lt;/small>&lt;/p>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
+                                <div class="card-columns">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://picsum.photos/250/150?image=46" alt="lorem">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lorem, ipsum dolor.</h5>
+                                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, beatae.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card p-3">
+                                        <blockquote class="blockquote mb-0 card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                            <footer class="blockquote-footer">
+                                                <small class="text-muted">
+                                                Lorem ipsum dolor sit amet.
+                                                </small>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lorem Ipsum</h5>
+                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, quaerat?</p>
+                                        </div>
+                                    </div>
+                                    <div class="card bg-primary text-white text-center p-3">
+                                        <blockquote class="blockquote mb-0">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="card text-center bg-warning">
+                                        <div class="card-body">
+                                        <h5 class="card-title">lorem</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, tempora.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card p-3 text-right">
+                                        <blockquote class="blockquote mb-0">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer class="blockquote-footer">
+                                            <small class="text-muted">
+                                            Someone famous in <cite title="Source Title">Source Title</cite>
+                                            </small>
+                                        </footer>
+                                        </blockquote>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Nemo soluta autem nisi cupiditate accusantium? Necessitatibus placeat distinctio ratione adipisci voluptate.</p>
+                                        <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="modals">
+                        <h4 class="pl-2 mt-4">Modals</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Jeżeli chcemy przedstawić dane w popupie możemy zastosować komponent <span class="text-info">"modal"</span></p>
+
+                                <pre><code>
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open me ;)
+&lt;/button>
+    
+&lt;div class="modal fade" id="myModal" tabindex="-1">
+    &lt;div class="modal-dialog modal-dialog-centered">
+        &lt;div class="modal-content">
+            &lt;div class="modal-header">
+                &lt;h5 class="modal-title">Lorem ipsum dolor sit amet.&lt;/h5>
+                &lt;button type="button" class="close" data-dismiss="modal">
+                    &lt;span aria-hidden="true">&times;&lt;/span>
+                &lt;/button>
+            &lt;/div>
+            &lt;div class="modal-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Laborum sit corrupti ipsa voluptatibus, rerum deserunt fuga adipisci dolorem excepturi vel.
+            &lt;/div>
+            &lt;div class="modal-footer">
+                &lt;button type="button" class="btn btn-secondary" data-dismiss="modal">Close&lt;/button>
+                &lt;button type="button" class="btn btn-primary" data-dismiss="modal">Send&lt;/button>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                    Open me ;)
+                                </button>
+                                    
+                                <div class="modal fade" id="myModal" tabindex="-1">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Lorem ipsum dolor sit amet.</h5>
+                                                <button type="button" class="close" data-dismiss="modal">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit corrupti ipsa voluptatibus, rerum deserunt fuga adipisci dolorem excepturi vel.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
             </div>
         </div>
