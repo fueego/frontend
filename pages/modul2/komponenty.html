@@ -112,12 +112,10 @@
                             <div class="dropdown">
                                 <a class="nav-link text-secondary" data-toggle="dropdown">Grid & Flex</a>
                                 <div class="dropdown-menu">
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Opis działania siatki</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Pozycjonowanie i
-                                            offset</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Klasy flexbox</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Marginesy i
-                                            ustawianie kolejności</a></div>
+                                        <div class="dropdown-item"><a href="flexgrid.html#siatka" class="text-secondary">Opis działania siatki</a></div>
+                                        <div class="dropdown-item"><a href="flexgrid.html#pozycjonowanie" class="text-secondary">Pozycjonowanie i offset</a></div>
+                                        <div class="dropdown-item"><a href="flexgrid.html#flexbox" class="text-secondary">Pozostałe klasy flexbox</a></div>
+                                        <div class="dropdown-item"><a href="flexgrid.html#marginesy" class="text-secondary">Marginesy i ustawianie kolejności</a></div>
                                 </div>
                             </div>
                         </li>
@@ -1618,6 +1616,208 @@ $(function () {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="scrollspy">
+                        <h4 class="pl-2 mt-4">Scrollspy</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>W celu zwiększenia "user experience" użytkownika możemy zastosować <span class="text-info">scrollspy</span> do sledzenia nawigacji</p>
+                                <p>W pierwszym kroku należy aktywować scrollspy dla poniższej nawigacji</p>
+
+                                <ul class="nav nav-pills" id="spyMenu">
+                                    <li class="nav-item">
+                                        <a href="#link1" id="linkNr1" class="nav-link active">Link1</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a href="#link2" id="linkNr2" class="nav-link">Link2</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#link3" id="linkNr3" class="nav-link">Link3</a>
+                                    </li>
+                                </ul>
+
+                                <div data-spy="scroll"
+                                    data-target="#spyMenu"
+                                    style="height: 200px; overflow: auto; margin-top: .25rem;"
+                                    data-offset="0">
+
+                                    <p id="link1" class="mb-4">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+                                    </p>
+
+                                    <p id="link2" class="my-4">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+                                        
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+                                    </p>
+
+                                    <p id="link3" class="my-4">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+                                        
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+                                        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+                                        ullam possimus modi veniam suscipit at blanditiis sequi?
+                                    </p>
+                                </div>
+
+                                <pre class="mt-2"><code>
+$('body').scrollspy({ target: '#spyMenu' });
+                                </code></pre>
+
+                                <pre><code>
+&lt;ul class="nav nav-pills" id="spyMenu">
+    &lt;li class="nav-item">
+        &lt;a href="#link1" class="nav-link active">Link1&lt;/a>
+    &lt;/li>
+    
+    &lt;li class="nav-item">
+        &lt;a href="#link2" class="nav-link">Link2&lt;/a>
+    &lt;/li>
+
+    &lt;li class="nav-item">
+        &lt;a href="#link3" class="nav-link">Link3&lt;/a>
+    &lt;/li>
+&lt;/ul>
+
+&lt;div 
+    data-spy="scroll"
+    data-target="#spyMenu"
+    style="height: 350px; overflow: auto;"
+    data-offset="0">
+
+    &lt;div id="link1" class="mb-4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+        ullam possimus modi veniam suscipit at blanditiis sequi?
+        ...
+    &lt;/div>
+    &lt;div id="link2" class="mb-4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+        ullam possimus modi veniam suscipit at blanditiis sequi?
+        ...
+    &lt;/div>
+    &lt;div id="link3" class="mb-4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
+        voluptatum eveniet veritatis iure nesciunt eum beatae, corporis,
+        ullam possimus modi veniam suscipit at blanditiis sequi?
+        ...
+    &lt;/div>
+&lt;/div>
+                                    </code></pre>
                             </div>
                         </div>
                     </section>

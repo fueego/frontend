@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/railscasts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Szkolenie Front-End</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a href="../../index.html" class="navbar-brand">Hello Front-End</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="../modul1/modul1.html" class="nav-link">MODUŁ1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">MODUŁ2</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                <i class="far fa-arrow-alt-circle-down"></i> PLIKI POMOCNICZE
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="../download.html#css" class="dropdown-item">Moduł1 - HTML/STYLE</a>
+                                <a href="../download.html#bootstrap" class="dropdown-item">Moduł2 - BOOTSTRAP/JS</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="nav rounded border mainMenu bg-white">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary active" data-toggle="dropdown">jQuery (JS)</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item">
+                                        <a href="./modul2.html#jqueryWprowadzenie" class="text-secondary">jQuery
+                                            wprowadzenie</a>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="dropdown-item">
+                                        <a href="./modul2.html#jqueryPrzyklady" class="text-secondary">JavaScript
+                                            przykłady</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Bootstrap</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="./bootstrap.html#wprowadzenie" class="text-secondary">Wprowadzenie</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#coNowego" class="text-secondary">Co
+                                            nowego?</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#konfiguracja" class="text-secondary">Konfiguracja</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#naglowki" class="text-secondary">Nagłowki
+                                            – typografia</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#pozycjonowanieTekstu" class="text-secondary">Pozycjonowanie
+                                            tekstu</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#pozcjonowanieElementow" class="text-secondary">Pozycjonowanie
+                                            elementow</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#marginesy" class="text-secondary">Marginesy,
+                                            paddingi</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#kolory" class="text-secondary">Kolory
+                                            i tła</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#breakpointy" class="text-secondary">Breakpointy</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Komponenty</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="komponenty.html#navbar" class="text-secondary">Navbar & Navs</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#carousel" class="text-secondary">Carousel</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#jumbotron" class="text-secondary">Jumbotron</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#buttons" class="text-secondary">Buttons & Groups</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#dropdowns" class="text-secondary">Dropdowns</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#lists" class="text-secondary">List Groups</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#tooltips" class="text-secondary">Tooltips & Popovers</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#forms" class="text-secondary">Forms & Inputs</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#tables" class="text-secondary">Tables</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#pagination" class="text-secondary">Pagination</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#cards" class="text-secondary">Cards</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#modals" class="text-secondary">Modals</a></div>
+                                    <div class="dropdown-item"><a href="komponenty.html#scrollspy" class="text-secondary">ScrollSpy</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Grid & Flex</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="flexgrid.html#siatka" class="text-secondary">Opis działania siatki</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#pozycjonowanie" class="text-secondary">Pozycjonowanie i offset</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#flexbox" class="text-secondary">Pozostałe klasy flexbox</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#marginesy" class="text-secondary">Marginesy i ustawianie kolejności</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Serwis WWW</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Konfiguracja środowiska</a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-2 pt-5">
+                <div class="col">
+                    <section id="siatka">
+                        <h4 class="pl-2">Siatka</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Siatka to jedna z bardzo wartosciowych rzeczy jakie oferuje nam bootstrap</p>
+                                <p>Przed użyciem siatki musimy zdefiniować miejsce jej zastosowania.</p>
+                                <p>Do dyspozycji mamy dwa rozwiązania klasę <span class="text-info">".container"</span> lub <span class="text-info">".container-fluid"</span></p>
+                                <p><span class="text-info">".container"</span> wycentruje content strony względem wyswietlacza</p>
+                                <p><span class="text-info">".container-fluid"</span> maksymalnie rozciągnie content strony do rogów wyswietlacza</p>
+                                <p>Kolejnym elementem składowym dla naszej siatki jest klasa row <span class="text-info">".row"</span></p>
+                                
+                                    <div class="container">
+<pre><code>
+        &lt;div class="container">
+            &lt;div class="row">
+                &lt;div class="col-sm-6 bg-warning">
+                    Lorem ipsum dolor sit amet.
+                &lt;/div>
+        
+                &lt;div class="col-sm-6 bg-danger text-white">
+                    Lorem ipsum dolor, sit amet.
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+</code></pre>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-6 bg-warning">
+                                                Lorem ipsum dolor sit amet.
+                                            </div>
+
+                                            <div class="col-sm-6 bg-danger text-white">
+                                                Lorem ipsum dolor, sit amet.
+                                            </div>
+                                        </div>
+
+                                        <pre><code>
+&lt;div class="container">
+    &lt;div class="row">
+        &lt;div class="col-sm-4 bg-warning">
+            Lorem ipsum dolor sit amet.
+        &lt;/div>
+
+        &lt;div class="col-sm-4 bg-info text-white">
+            Lorem ipsum dolor, sit amet.
+        &lt;/div>
+
+        &lt;div class="col-sm-4 bg-danger text-white">
+            Lorem ipsum dolor, sit amet.
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                        </code></pre>
+
+                                        <div class="row my-4">
+                                            <div class="col-sm-4 bg-warning">
+                                                Lorem ipsum dolor sit amet.
+                                            </div>
+
+                                            <div class="col-sm-4 bg-info text-white">
+                                                Lorem ipsum dolor, sit amet.
+                                            </div>
+
+                                            <div class="col-sm-4 bg-danger text-white">
+                                                Lorem ipsum dolor, sit amet.
+                                            </div>
+                                        </div>
+
+                                        <pre><code>
+&lt;div class="container">
+    &lt;div class="row">
+        &lt;div class="col-sm-2 bg-success">
+            Lorem ipsum dolor sit amet.
+        &lt;/div>
+
+        &lt;div class="col-sm-2 bg-light">
+            Lorem ipsum dolor, sit amet.
+        &lt;/div>
+
+        &lt;div class="col-sm-2 bg-success">
+            Lorem ipsum dolor sit amet.
+        &lt;/div>
+
+        &lt;div class="col-sm-2 bg-light">
+            Lorem ipsum dolor, sit amet.
+        &lt;/div>
+
+        &lt;div class="col-sm-2 bg-success">
+            Lorem ipsum dolor sit amet.
+        &lt;/div>
+
+        &lt;div class="col-sm-2 bg-light">
+            Lorem ipsum dolor, sit amet.
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                        </code></pre>
+
+                                        <div class="row my-4">
+                                            <div class="col-sm-2 bg-success">
+                                                Lorem ipsum dolor sit amet.
+                                            </div>
+
+                                            <div class="col-sm-2 bg-light">
+                                                Lorem ipsum dolor, sit amet.
+                                            </div>
+
+                                            <div class="col-sm-2 bg-success">
+                                                Lorem ipsum dolor sit amet.
+                                            </div>
+
+                                            <div class="col-sm-2 bg-light">
+                                                Lorem ipsum dolor, sit amet.
+                                            </div>
+
+                                            <div class="col-sm-2 bg-success">
+                                                Lorem ipsum dolor sit amet.
+                                            </div>
+
+                                            <div class="col-sm-2 bg-light">
+                                                Lorem ipsum dolor, sit amet.
+                                            </div>
+                                        </div>
+
+                                        <p>Możemy również zastosować samą klasę <span class="text-info">".col"</span>, dzięki temu bootstrap automatycznie postara się dopasować elementy strony</p>
+
+                                        <pre><code>
+&lt;div class="container">
+    &lt;div class="row">
+        &lt;div class="col bg-info">
+            &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+        &lt;/div>
+        &lt;div class="col">
+            &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+        &lt;/div>
+        &lt;div class="col bg-info">
+            &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+        &lt;/div>
+        &lt;div class="col">
+            &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+        &lt;/div>
+        &lt;div class="col bg-info">
+            &lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                        </code></pre>
+
+                                        <div class="row my-4">
+                                            <div class="col bg-info">
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                            <div class="col">
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                            <div class="col bg-info">
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                            <div class="col">
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                            <div class="col bg-info">
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="pozycjonowanie">
+                        <h4 class="pl-2 mt-4">Pozycjonowanie i offset</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Zaczynając od pozycjonowania grupowego w pionie</p>
+                                <p><span class="text-info">".align-items-start"</span></p>
+                                
+                                <div class="container">
+                                    <div class="row align-items-start" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col bg-info">align-items-start</div>
+                                        <div class="col bg-warning">align-items-start</div>
+                                    </div>
+                                </div>
+                                
+                                <p class="my-3"><span class="text-info">".align-items-center"</span></p>
+
+                                <div class="container">
+                                    <div class="row align-items-center" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col bg-info">align-items-center</div>
+                                        <div class="col bg-warning">align-items-center</div>
+                                    </div>
+                                </div>
+
+                                <p class="my-3"><span class="text-info">".align-items-end"</span></p>
+
+                                <div class="container">
+                                    <div class="row align-items-end" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col bg-info">align-items-end</div>
+                                        <div class="col bg-warning">align-items-end</div>
+                                    </div>
+                                </div>
+
+                                <p class="my-3"><span class="text-info">".align-items-strech"</span></p>
+
+                                <div class="container">
+                                    <div class="row align-items-stretch" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col bg-info">align-items-strech</div>
+                                        <div class="col bg-warning">align-items-strech</div>
+                                    </div>
+                                </div>
+
+                                <p class="mt-4">To samo tylko pojedyńczo</p>
+                                <p class="my-3"><span class="text-info">".align-self-*"</span></p>
+
+                                <div class="container">
+                                    <div class="row" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col align-self-start bg-info">align-self-start</div>
+                                        <div class="col align-self-center bg-warning">align-self-center</div>
+                                        <div class="col align-self-end bg-dark text-white">align-self-end</div>
+                                    </div>
+                                </div>
+
+                                <p class="mt-4">Pozycjonowanie w poziomie</p>
+                                <p class="my-3"><span class="text-info">".justify-content-start"</span></p>
+
+                                <div class="container">
+                                    <div class="row justify-content-start" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col-2 align-self-center text-white bg-info">justify-content-start</div>
+                                    </div>
+                                </div>
+
+                                <p class="my-3"><span class="text-info">".justify-content-center"</span></p>
+
+                                <div class="container">
+                                    <div class="row justify-content-center" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col-3 align-self-center text-white bg-info">justify-content-center</div>
+                                    </div>
+                                </div>
+
+                                <p class="my-3"><span class="text-info">".justify-content-end"</span></p>
+
+                                <div class="container">
+                                    <div class="row justify-content-end" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col-2 align-self-center text-white bg-info">justify-content-end</div>
+                                    </div>
+                                </div>
+
+                                <p class="my-3"><span class="text-info">".justify-content-between"</span></p>
+
+                                <div class="container">
+                                    <div class="row justify-content-between" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col-3 align-self-center text-white bg-info">justify-content-between</div>
+                                        <div class="col-3 align-self-center text-white bg-info">justify-content-between</div>
+                                    </div>
+                                </div>
+
+                                <p class="my-3"><span class="text-info">".justify-content-around"</span></p>
+
+                                <div class="container">
+                                    <div class="row justify-content-around" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col-3 align-self-center text-white bg-info">justify-content-around</div>
+                                        <div class="col-3 align-self-center text-white bg-info">justify-content-around</div>
+                                    </div>
+                                </div>
+
+                                <p class="mt-4">W celu przesunięcia danej kolumny w poziomie, możemy zastosować <span class="text-info">".offset-xx-yy"</span></p>
+                                <p>gdzie xx to [ sm, md, lg ] natomiast yy to własnie offset</p>
+
+                                <pre><code>
+&lt;div class="row" style="height: 40px; width: 100%; border: 2px solid #ddd">
+    &lt;div class="col-md-6 offset-md-3 bg-info text-white text-center">Lorem ipsum dolor sit amet.&lt;/div>
+&lt;/div>
+                                </code></pre>
+                                
+                                <div class="container">
+                                    <div class="row" style="height: 40px; width: 100%; border: 2px solid #ddd">
+                                        <div class="col-md-6 offset-md-3 bg-info text-white text-center">Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+
+                                <p class="mt-4">Suma przesunięcia plus szerokosć kolumny nie może być większa niż 12, ten sam schemat obowiązuje dla wszystkich wskaznikow wielkosci</p>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="../../js/vendor/jquery-3.3.1.min.js"></script>
+<script src="../../js/vendor/popper.min.js"></script>
+<script src="../../js/vendor/bootstrap.min.js"></script>
+<script src="../../js/vendor/highlight.pack.js"></script>
+<script src="../../js/module2examples.js"></script>
+<script src="../../js/general.js"></script>
+</body>
+
+</html>

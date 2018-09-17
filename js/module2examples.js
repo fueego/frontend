@@ -23,4 +23,7 @@ $(function() {
 
     //aktywacja popovera
     $('[data-toggle="popover"]').popover();
+
+    //aktywacja scrollspy
+    $('body').scrollspy({ target: '#spyMenu' });
 });
