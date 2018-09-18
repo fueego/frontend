@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/railscasts.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .smallWrapper {
+            height: 250px;
+            border: 2px solid #ddd;
+        }
+
+        .bigWrapper {
+            height: 450px;
+            border: 2px solid #ddd;
+        }
+    </style>
     <title>Szkolenie Front-End</title>
 </head>
 
@@ -71,19 +82,13 @@
                                 <a class="nav-link text-secondary" data-toggle="dropdown">Bootstrap</a>
                                 <div class="dropdown-menu">
                                     <div class="dropdown-item"><a href="./bootstrap.html#wprowadzenie" class="text-secondary">Wprowadzenie</a></div>
-                                    <div class="dropdown-item"><a href="./bootstrap.html#coNowego" class="text-secondary">Co
-                                            nowego?</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#coNowego" class="text-secondary">Conowego?</a></div>
                                     <div class="dropdown-item"><a href="./bootstrap.html#konfiguracja" class="text-secondary">Konfiguracja</a></div>
-                                    <div class="dropdown-item"><a href="./bootstrap.html#naglowki" class="text-secondary">Nagłowki
-                                            – typografia</a></div>
-                                    <div class="dropdown-item"><a href="./bootstrap.html#pozycjonowanieTekstu" class="text-secondary">Pozycjonowanie
-                                            tekstu</a></div>
-                                    <div class="dropdown-item"><a href="./bootstrap.html#pozcjonowanieElementow" class="text-secondary">Pozycjonowanie
-                                            elementow</a></div>
-                                    <div class="dropdown-item"><a href="./bootstrap.html#marginesy" class="text-secondary">Marginesy,
-                                            paddingi</a></div>
-                                    <div class="dropdown-item"><a href="./bootstrap.html#kolory" class="text-secondary">Kolory
-                                            i tła</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#naglowki" class="text-secondary">Nagłowki– typografia</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#pozycjonowanieTekstu" class="text-secondary">Pozycjonowanietekstu</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#pozcjonowanieElementow" class="text-secondary">Pozycjonowanieelementow</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#marginesy" class="text-secondary">Marginesy,paddingi</a></div>
+                                    <div class="dropdown-item"><a href="./bootstrap.html#kolory" class="text-secondary">Koloryi tła</a></div>
                                     <div class="dropdown-item"><a href="./bootstrap.html#breakpointy" class="text-secondary">Breakpointy</a></div>
                                 </div>
                             </div>
@@ -308,9 +313,18 @@
                             <div class="card-body">
                                 <p>Zaczynając od pozycjonowania grupowego w pionie</p>
                                 <p><span class="text-info">".align-items-start"</span></p>
+
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row align-items-start smallWrapper">
+        &lt;div class="col bg-info">align-items-start&lt;/div>
+        &lt;div class="col bg-warning">align-items-start&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
                                 
                                 <div class="container">
-                                    <div class="row align-items-start" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row align-items-start smallWrapper">
                                         <div class="col bg-info">align-items-start</div>
                                         <div class="col bg-warning">align-items-start</div>
                                     </div>
@@ -318,8 +332,17 @@
                                 
                                 <p class="my-3"><span class="text-info">".align-items-center"</span></p>
 
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row align-items-center smallWrapper">
+        &lt;div class="col bg-info">align-items-center&lt;/div>
+        &lt;div class="col bg-warning">align-items-center&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
                                 <div class="container">
-                                    <div class="row align-items-center" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row align-items-center smallWrapper">
                                         <div class="col bg-info">align-items-center</div>
                                         <div class="col bg-warning">align-items-center</div>
                                     </div>
@@ -327,8 +350,17 @@
 
                                 <p class="my-3"><span class="text-info">".align-items-end"</span></p>
 
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row align-items-end smallWrapper">
+        &lt;div class="col bg-info">align-items-end&lt;/div>
+        &lt;div class="col bg-warning">align-items-end&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
                                 <div class="container">
-                                    <div class="row align-items-end" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row align-items-end smallWrapper">
                                         <div class="col bg-info">align-items-end</div>
                                         <div class="col bg-warning">align-items-end</div>
                                     </div>
@@ -336,8 +368,17 @@
 
                                 <p class="my-3"><span class="text-info">".align-items-strech"</span></p>
 
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row align-items-stretch smallWrapper">
+        &lt;div class="col bg-info">align-items-strech&lt;/div>
+        &lt;div class="col bg-warning">align-items-strech&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
                                 <div class="container">
-                                    <div class="row align-items-stretch" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row align-items-stretch smallWrapper">
                                         <div class="col bg-info">align-items-strech</div>
                                         <div class="col bg-warning">align-items-strech</div>
                                     </div>
@@ -345,9 +386,19 @@
 
                                 <p class="mt-4">To samo tylko pojedyńczo</p>
                                 <p class="my-3"><span class="text-info">".align-self-*"</span></p>
+                                
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row smallWrapper">
+        &lt;div class="col align-self-start bg-info">align-self-start&lt;/div>
+        &lt;div class="col align-self-center bg-warning">align-self-center&lt;/div>
+        &lt;div class="col align-self-end bg-dark text-white">align-self-end&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
 
                                 <div class="container">
-                                    <div class="row" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row smallWrapper">
                                         <div class="col align-self-start bg-info">align-self-start</div>
                                         <div class="col align-self-center bg-warning">align-self-center</div>
                                         <div class="col align-self-end bg-dark text-white">align-self-end</div>
@@ -357,32 +408,65 @@
                                 <p class="mt-4">Pozycjonowanie w poziomie</p>
                                 <p class="my-3"><span class="text-info">".justify-content-start"</span></p>
 
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row justify-content-start smallWrapper">
+        &lt;div class="col-2 align-self-center text-white bg-info">justify-content-start&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
                                 <div class="container">
-                                    <div class="row justify-content-start" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row justify-content-start smallWrapper">
                                         <div class="col-2 align-self-center text-white bg-info">justify-content-start</div>
                                     </div>
                                 </div>
 
                                 <p class="my-3"><span class="text-info">".justify-content-center"</span></p>
 
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row justify-content-center smallWrapper">
+        &lt;div class="col-3 align-self-center text-white bg-info">justify-content-center&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
                                 <div class="container">
-                                    <div class="row justify-content-center" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row justify-content-center smallWrapper">
                                         <div class="col-3 align-self-center text-white bg-info">justify-content-center</div>
                                     </div>
                                 </div>
 
                                 <p class="my-3"><span class="text-info">".justify-content-end"</span></p>
 
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row justify-content-end smallWrapper">
+        &lt;div class="col-2 align-self-center text-white bg-info">justify-content-end&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
                                 <div class="container">
-                                    <div class="row justify-content-end" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row justify-content-end smallWrapper">
                                         <div class="col-2 align-self-center text-white bg-info">justify-content-end</div>
                                     </div>
                                 </div>
 
                                 <p class="my-3"><span class="text-info">".justify-content-between"</span></p>
 
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row justify-content-between smallWrapper">
+        &lt;div class="col-3 align-self-center text-white bg-info">justify-content-between&lt;/div>
+        &lt;div class="col-3 align-self-center text-white bg-info">justify-content-between&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
                                 <div class="container">
-                                    <div class="row justify-content-between" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row justify-content-between smallWrapper">
                                         <div class="col-3 align-self-center text-white bg-info">justify-content-between</div>
                                         <div class="col-3 align-self-center text-white bg-info">justify-content-between</div>
                                     </div>
@@ -390,8 +474,17 @@
 
                                 <p class="my-3"><span class="text-info">".justify-content-around"</span></p>
 
+                                <pre><code>
+&lt;div class="container">
+    &lt;div class="row justify-content-around smallWrapper">
+        &lt;div class="col-3 align-self-center text-white bg-info">justify-content-around&lt;/div>
+        &lt;div class="col-3 align-self-center text-white bg-info">justify-content-around&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </code></pre>
+
                                 <div class="container">
-                                    <div class="row justify-content-around" style="height: 150px; width: 100%; border: 2px solid #ddd">
+                                    <div class="row justify-content-around smallWrapper">
                                         <div class="col-3 align-self-center text-white bg-info">justify-content-around</div>
                                         <div class="col-3 align-self-center text-white bg-info">justify-content-around</div>
                                     </div>
@@ -417,11 +510,241 @@
                             </div>
                         </div>
                     </section>
+
+                    <section id="flexbox">
+                        <h4 class="pl-2 mt-4">Pozostałe klasy flexbox</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="container">
+                                
+                                    <p>W celu aktywacji flexboxa dla wybranego kontenera musimy dodać klasę <span class="text-info">".d-flex"</span>. Już samo dodanie wspomnianej klasy spowoduje zmianę rozkładu elementów z wierszy na kolumny.</p>
+                                    <p>Przykład bez flexboxa</p>
+
+                                    <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="smallWrapper">
+        &lt;div class="bg-info p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-warning p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-danger p-4">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                    </code></pre>
+                                    
+                                    <div class="simpleExample">
+                                        <div class="smallWrapper">
+                                            <div class="bg-info p-4">Zwykły div</div>
+                                            <div class="bg-warning p-4">Zwykły div</div>
+                                            <div class="bg-danger p-4">Zwykły div</div>
+                                        </div>
+                                    </div>
+
+                                    <p class="mt-5">Przykład z flexboxem, tak samo wygląda dla <span class="text-info">".flex-row"</span></p>
+
+                                    <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="smallWrapper d-flex flex-row">
+        &lt;div class="bg-info p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-warning p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-danger p-4">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                    </code></pre>
+
+                                    <div class="simpleExample">
+                                        <div class="smallWrapper d-flex flex-row">
+                                            <div class="bg-info p-4">Zwykły div</div>
+                                            <div class="bg-warning p-4">Zwykły div</div>
+                                            <div class="bg-danger p-4">Zwykły div</div>
+                                        </div>
+                                    </div>
+
+                                    <p class="mt-5">W celu odwrócenia elementów stosujemy <span class="text-info">".flex-row-reverse"</span></p>
+
+                                    <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="smallWrapper d-flex flex-row-reverse">
+        &lt;div class="bg-info p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-warning p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-danger p-4">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                    </code></pre>
+
+                                    <div class="simpleExample">
+                                        <div class="smallWrapper d-flex flex-row-reverse">
+                                            <div class="bg-info p-4">Zwykły div</div>
+                                            <div class="bg-warning p-4">Zwykły div</div>
+                                            <div class="bg-danger p-4">Zwykły div</div>
+                                        </div>
+                                    </div>
+
+                                    <p class="mt-5">Z ".justify-content-x" mielismy już doczynienia wczesniej :) zerknijmy co tam się działo.</p>
+                                    <p>Jak dobrze wiemy flexbox może przekształcić rows w columns a do tego celu posiłkujemy się klasą <span class="text-info">".flex-column"</span></p>
+
+                                    <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="smallWrapper d-flex flex-column">
+        &lt;div class="bg-info p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-warning p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-danger p-4">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                    </code></pre>
+
+                                    <div class="simpleExample">
+                                        <div class="smallWrapper d-flex flex-column">
+                                            <div class="bg-info p-4">Zwykły div</div>
+                                            <div class="bg-warning p-4">Zwykły div</div>
+                                            <div class="bg-danger p-4">Zwykły div</div>
+                                        </div>
+                                    </div>
+
+                                    <p class="mt-5">Jak w poprzednim przypadku, w celu odwrócenia elementów html możemy zastosować <span class="text-info">".flex-column-reverse"</span></p>
+
+                                    <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="smallWrapper d-flex flex-column-reverse">
+        &lt;div class="bg-info p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-warning p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-danger p-4">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                    </code></pre>
+
+                                    <div class="simpleExample">
+                                        <div class="smallWrapper d-flex flex-column-reverse">
+                                            <div class="bg-info p-4">Zwykły div</div>
+                                            <div class="bg-warning p-4">Zwykły div</div>
+                                            <div class="bg-danger p-4">Zwykły div</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="marginesy">
+                            <h4 class="pl-2 mt-4">Marginesy i ustawianie kolejności</h4>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <p>Automatyczne marginesy i możliwosc zmiany kolejnosci elementów html w bootstrapa to kontynuacja stosowania klas z flexboxa</p>
+                                        <p>Mając na mysli automatyczne marginesy chodziło mi o zastosowanie jak poniżej <span class="text-info">".ml-auto"</span></p>
+
+                                        <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="smallWrapper d-flex">
+        &lt;div class="bg-info p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-warning p-4 ml-auto">Zwykły div&lt;/div>
+        &lt;div class="bg-danger p-4">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                        </code></pre>
+
+                                        <div class="simpleExample">
+                                            <div class="smallWrapper d-flex">
+                                                <div class="bg-info p-4">Zwykły div</div>
+                                                <div class="bg-warning p-4 ml-auto">Zwykły div</div>
+                                                <div class="bg-danger p-4">Zwykły div</div>
+                                            </div>
+                                        </div>
+
+                                        <p class="mt-5">Lub w prawą stronę <span class="text-info">".mr-auto"</span></p>
+
+                                        <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="smallWrapper d-flex">
+        &lt;div class="bg-info p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-warning p-4 mr-auto">Zwykły div&lt;/div>
+        &lt;div class="bg-danger p-4">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                        </code></pre>
+
+                                        <div class="simpleExample">
+                                            <div class="smallWrapper d-flex">
+                                                <div class="bg-info p-4">Zwykły div</div>
+                                                <div class="bg-warning p-4 mr-auto">Zwykły div</div>
+                                                <div class="bg-danger p-4">Zwykły div</div>
+                                            </div>
+                                        </div>
+
+                                        <p class="mt-5">Marginesy, można stosować w górę</p>
+
+                                        <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="bigWrapper d-flex flex-column">
+        &lt;div class="bg-info p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-warning p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-danger p-4 mt-auto">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                        </code></pre>
+
+                                        <div class="simpleExample">
+                                            <div class="bigWrapper d-flex flex-column">
+                                                <div class="bg-info p-4">Zwykły div</div>
+                                                <div class="bg-warning p-4">Zwykły div</div>
+                                                <div class="bg-danger p-4 mt-auto">Zwykły div</div>
+                                            </div>
+                                        </div>
+
+                                        <p class="mt-5">Jak i w dół</p>
+
+                                        <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="bigWrapper d-flex flex-column">
+        &lt;div class="bg-info p-4 mb-auto">Zwykły div&lt;/div>
+        &lt;div class="bg-warning p-4">Zwykły div&lt;/div>
+        &lt;div class="bg-danger p-4">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                        </code></pre>
+
+                                        <div class="simpleExample">
+                                            <div class="bigWrapper d-flex flex-column">
+                                                <div class="bg-info p-4 mb-auto">Zwykły div</div>
+                                                <div class="bg-warning p-4">Zwykły div</div>
+                                                <div class="bg-danger p-4">Zwykły div</div>
+                                            </div>
+                                        </div>
+
+                                        <p class="mt-5">Jeżeli mamy taką potrzebę, możemy zmienić kolejnosć wyswietlania elementów html</p>
+                                        <p>Do tego typu zabiegów możemy uciec się do zastosowania klasy <span class="text-info">".order-x"</span></p>
+
+                                        <pre><code>
+&lt;div class="simpleExample">
+    &lt;div class="smallWrapper d-flex">
+        &lt;div class="order-2 bg-info p-4">Zwykły div&lt;/div>
+        &lt;div class="order-3 bg-warning p-4">Zwykły div&lt;/div>
+        &lt;div class="order-1 bg-danger p-4">Zwykły div&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                        </code></pre>
+
+                                        <div class="simpleExample">
+                                            <div class="smallWrapper d-flex">
+                                                <div class="order-2 bg-info p-4">Zwykły div</div>
+                                                <div class="order-3 bg-warning p-4">Zwykły div</div>
+                                                <div class="order-1 bg-danger p-4">Zwykły div</div>
+                                            </div>
+                                        </div>
+
+                                    </div>   
+                                </div>
+                            </div>
+                        </section>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<div id="goUp">
+    <i class="fas fa-angle-double-up fa-3x"></i>
+</div>
 
 <script src="../../js/vendor/jquery-3.3.1.min.js"></script>
 <script src="../../js/vendor/popper.min.js"></script>

@@ -16,4 +16,19 @@ $(document).ready(function() {
             })
         }
     });
+
+    //scroll up
+    $(window).on('scroll', () => {
+        if($('#goUp').offset().top >= 1500) {
+            $('#goUp').css('visibility', 'visible');
+        } else {
+            $('#goUp').css('visibility', 'hidden');
+        }
+    });
+
+    $('#goUp').on('click', () => {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+    });
 });

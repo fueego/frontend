@@ -32,13 +32,9 @@ body {
     width: 280px; }
     body .mainNav .nav-item {
       border-bottom: 1px solid #dedede; }
-
-xmp {
-  margin: 5px 0;
-  padding: 8px; }
-
-xmp:before {
-  content: "";
-  display: inline-block;
-  height: 1em;
-  margin: 0 -5px -2em -5px; }
+  body #goUp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    visibility: hidden;
+    cursor: pointer; }

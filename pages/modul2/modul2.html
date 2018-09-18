@@ -109,10 +109,10 @@
                             <div class="dropdown">
                                 <a class="nav-link text-secondary" data-toggle="dropdown">Grid & Flex</a>
                                 <div class="dropdown-menu">
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Opis działania siatki</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Pozycjonowanie i offset</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Pozostałe klasy flexbox</a></div>
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Marginesy i ustawianie kolejności</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#siatka" class="text-secondary">Opis działania siatki</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#pozycjonowanie" class="text-secondary">Pozycjonowanie i offset</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#flexbox" class="text-secondary">Pozostałe klasy flexbox</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#marginesy" class="text-secondary">Marginesy i ustawianie kolejności</a></div>
                                 </div>
                             </div>
                         </li>
@@ -127,6 +127,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="row mt-2 pt-5" id="jqueryWprowadzenie">
                 <div class="col">
                     <section class="jquery">
@@ -148,8 +149,8 @@
                                     <a href="https://code.jquery.com/" target="_blank" class="text-info"><i class="fas fa-download"></i></a> ( https://code.jquery.com/ )
                                 </p>
 
-                                <p>W celu instalacji biblioteki na stronie wystarczy dodać pobrany plik między znacznikami <em class="text-info"><code>< body >...< / body ></code></em></p>
-                                <p>Następnie między znacznikami <em class="text-info"><code>< script >...< / script ></code></em> stosujemy predefiniowany znacznik kodu, 
+                                <p>W celu instalacji biblioteki na stronie wystarczy dodać pobrany plik między znacznikami <em class="text-info"><code>&lt;body>...&lt;/body></code></em></p>
+                                <p>Następnie między znacznikami <em class="text-info"><code>&lt;script>...&lt;/script></code></em> stosujemy predefiniowany znacznik kodu, 
                                 ktory umożliwi nam odwołanie się do elementow drzewa DOM po załadowaniu zawartosci strony. Zgodnie z poniższym snipetem</p>
 <pre>
     <code>
@@ -237,13 +238,90 @@
                                 </p>
                             </div>
                         </div>
+                    </section>
 
-                        <h4 id="jqueryPrzyklady" class="pl-2 mt-4">JavaScript przykłady kodu zaimplementowane na stronie</h4>
+                    <section class="jquery" id="jqueryPrzyklady">
+                        <h4 class="pl-2 mt-4">JavaScript przykłady kodu zaimplementowane na stronie</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Jako pierwszemu przyglądniemy się smoothScrolling</p>
+
+                                <pre><code>
+//$('.nav a').on('click', ... : ustawia EventListener na odnosnikach menu z klasą nav
+$('.nav a').on('click', (e) => {
+    //argument funkcji "e" daje nam dostęp do wielu informacji o klikniętym elemencie
+    //stała hash, przechowuje atrybut "hash" klikniętego linku
+    const hash = e.currentTarget.hash;
+
+    //sprawdzamy czy kliknięty odnosnik, posiada jakikolwiek hash 
+    if(hash) {
+        //zapinamy metodę animacji na bloku html
+        $('html, body').animate({
+            //zamieniamy stałą "hash" na obiekt jQuery $(hash),
+            //zapinamy się z metodą .offset(), która zbiera informację o pozycji elementu obiekt {top: xx, left: xx}
+            scrollTop: $(hash).offset().top
+            //jako następny parametr funkcji animate, przekazujemy czas trwania animacji
+        }, 800, () => {
+            //po zakończeniu animacji, dodajemy do adresu url kliknięty hash
+            //przykład: http://127.0.0.1:5500/pages/modul2/modul2.html#jqueryPrzyklady
+            location.hash = hash
+        })
+    }
+});
+                                </code></pre>
+
+                                <p>Kolejnym skrypt, zastosowany na tej stronie dotyczy strzałki do góry :)</p>
+                                <p>Zastosowany CSS</p>
+
+                                <pre><code>
+#goUp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    visibility: hidden;
+    cursor: pointer;
+}
+                                </code></pre>
+
+                                <p class="mt-5">html</p>
+
+                                <pre><code>
+&lt;div id="goUp">
+    &lt;i class="fas fa-angle-double-up fa-3x">&lt;/i>
+&lt;/div>
+                                </code></pre>
+
+                                <p class="mt-5">jQuery</p>
+
+                                <pre><code>
+//pierwsza częsć odkrywa lub ukrywa element zawierający strzałki
+$(window).on('scroll', () => {
+    if($('#goUp').offset().top >= 1500) {
+        $('#goUp').css('visibility', 'visible');
+    } else {
+        $('#goUp').css('visibility', 'hidden');
+    }
+});
+
+//dodaje animację podobnie jak w przypadku navigacji
+$('#goUp').on('click', () => {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 800);
+});
+                                </code></pre>
+
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="goUp">
+        <i class="fas fa-angle-double-up fa-3x"></i>
+    </div>
 
     <script src="../../js/vendor/jquery-3.3.1.min.js"></script>
     <script src="../../js/vendor/popper.min.js"></script>
