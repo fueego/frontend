@@ -7,11 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/railscasts.css">
   <link rel="stylesheet" href="../../css/style.css">
   <title>Szkolenie Front-End</title>
 </head>
 
-<body>
+<body class="bg-light">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container">
             <a href="../../index.html" class="navbar-brand">Hello Front-End</a>
@@ -26,7 +27,7 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">MODUŁ1</a>
+                    <a href="../modul1/modul1.html" class="nav-link active">MODUŁ1</a>
                 </li>
                 <li class="nav-item">
                     <a href="../modul2/modul2.html" class="nav-link">MODUŁ2</a>
@@ -49,44 +50,297 @@
         </div>
     </nav>
 
-    <section class="mainNav">
-        <ul class="nav flex-column bg-light rounded border">
-            <li class="nav-item">
-                <a href="" class="nav-link text-secondary text-center text-uppercase">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a href="" class="nav-link text-secondary">Some link 1</a>
-            </li>
-            <li class="nav-item">
-                <a href="" class="nav-link text-secondary">Some link 2</a>
-            </li>
-            <li class="nav-item">
-                <a href="" class="nav-link text-secondary">Some link 3</a>
-            </li>
-        </ul>
-    </section>
-
     <section class="main-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3>Some information here</h3>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    <h3>Some information here</h3>
+                    <ul class="nav rounded border mainMenu bg-white">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a href="javascript:void(0);" class="nav-link text-secondary" data-toggle="dropdown">CSS</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="modul1.html#wprowadzenie" class="text-secondary">Wprowadzenie do CSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#zasady" class="text-secondary">Trzy zasady pisania dobrego kodu</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#selektory" class="text-secondary">Selektory CSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#przestrzen" class="text-secondary">Zarządzanie przestrzenią</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#elementy" class="text-secondary">Elementy blokowe, liniowe</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#pozycjonowanie" class="text-secondary">Pozycjonowanie i rozkład elementów na stronie</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#jednostki" class="text-secondary">Jednostki miary w CSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#zasadadzialania" class="text-secondary">Mechanizm działania CSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#animacje" class="text-secondary">Animacje CSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#rwd" class="text-secondary">RWD</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#architektura" class="text-secondary">Architektura CSS, zaznajomienie się z BEM</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">SASS</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="sass.html#navbar" class="text-secondary">Wprowadzenie do SASS</a></div>
+                                    <div class="dropdown-item"><a href="sass.html#carousel" class="text-secondary">Bezbolesna kompilacja scss do css</a></div>
+                                    <div class="dropdown-item"><a href="sass.html#jumbotron" class="text-secondary">Pierwsze kroki, zmienne i zagnieżdżanie</a></div>
+                                    <div class="dropdown-item"><a href="sass.html#buttons" class="text-secondary">Mixiny, Extendy i Funkcje</a></div>
+                                    <div class="dropdown-item"><a href="sass.html#dropdowns" class="text-secondary">Architektura 7-1 CSS przy użyciu Sass</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Flexbox</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="flexgrid.html#siatka" class="text-secondary">Flexbox? Po co to komu?</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#pozycjonowanie" class="text-secondary">Flexbox podstawowe wprowadzenie</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#flexbox" class="text-secondary">Zaznajomienie się z nowymi komendami</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Serwis WWW</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Konfiguracja środowiska</a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-2 pt-5">
+                <div class="col">
+                    <section id="wprowadzenie">
+                        <h4 class="pl-2">Wprowadzenie do CSS</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Kaskadowe arkusze stylów, w skrócie CSS jest to język służący opisowi formy prezentacji stron www. </p>
+                                <p>CSS opisuje jak elementy html, powinny być prezentowane na ekranie, podczas wydruku czy w czytniku ekranowym...</p>
+                                <p>Obecnie mamy trzy standardy CSS:</p>
+                                <p>
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-start align-items-center">
+                                            CSS w wersji
+                                            <span class="badge badge-info badge-pill ml-2">CSS1</span>
+                                            , obecnie mocno przestarzały
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-start align-items-center">
+                                            CSS w wersji
+                                            <span class="badge badge-info badge-pill ml-2">CSS2.1</span>
+                                            , obecnie rekomendowany zgodnie z "developer.mozilla.org"
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-start align-items-center">
+                                            CSS w wersji
+                                            <span class="badge badge-info badge-pill ml-2">CSS3</span>
+                                            , obecnie rozbity na mniejsze moduły w ciągłym procesie standaryzacji.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p>Idąc dalej za pomocą CSS, możemy na przykład zmienić font na stronie, dodać animację do elementu HTML czy manipulować odstępami na stronie.</p>
+                                <hr>
+                                <p>W celu dodania pliku ze stylami do strony, powinnismy umiescić <span class="text-info">&lt;link rel="stylesheet" href="mojPlik.css"></span> między znacznikami <span class="text-info">&lt;head>...&lt;head></span></p>
+
+                                <pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;meta charset="utf-8">
+    &lt;title>My CSS experiment&lt;/title>
+    &lt;link rel="stylesheet" href="style.css">
+  &lt;/head>
+  &lt;body>
+    &lt;h1>Witam serdecznie!&lt;/h1>
+    &lt;p>To mi wygląda jak pierwszy przykład :)&lt;/p>
+  &lt;/body>
+&lt;/html>
+                                </code></pre>
+
+                                <p>Style w "style.css"</p>
+
+                                <pre><code>
+h1 {
+    color: blue;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+p {
+    color: red;
+}
+                                </code></pre>
+
+                                <div class="examplePlace">
+                                    <h1 style="color: blue; background-color: yellow; border: 1px solid black">Witam serdecznie!</h1>
+                                    <p style="color: red">To mi wygląda jak pierwszy przykład :)</p>
+                                </div>
+
+                                <hr>
+
+                                <p>
+                                    Kolejnym rozwiązaniem dla szybkiego prototypowania może być dodanie styli w znacznikach <span class="text-info">&lt;style>...&lt;style></span>,
+                                    również w elemencie "head"
+                                    <pre><code>
+&lt;style>
+    [my-2] {
+        background: red;
+    }
+&lt;/style>
+                                    </code></pre>
+                                </p>
+
+                                <hr>
+
+                                <p>
+                                    Poza dodawaniem styli do pliku HTML w osobnym pliku, możemy również dodawać pliki bezposrednio do elementów html w pliku HTML (Inline style).
+                                    Jednak tego typu zabiegi, nie są mile widziane i powinny być stosowane z rozwagą lub o ile to możliwe nie powinny być implementowane wcale w ten sposób...
+                                </p>
+
+                                <pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+    &lt;title>Playing with Inline Styles&lt;/title>
+    &lt;/head>
+    &lt;body>
+    &lt;p style="color:blue;font-size:46px;">
+        I'm a big, blue, &lt;strong>strong&lt;/strong> paragraph
+    &lt;/p>
+    &lt;/body>
+&lt;/html>
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="zasady">
+                        <h4 class="pl-2 mt-4">Trzy zasady pisania dobrego kodu</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Przed klepaniem kodu, zawsze dobrze jest zastanowić się co tak na prawdę chcemy pisać i jak zrobić to najlepiej.</p>
+
+                                <div class="accordion" id="fundamentals">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link text-info" type="button" data-toggle="collapse" data-target="#collapseOne">
+                                            Responsywny Design
+                                            </button>
+                                        </h5>
+                                        </div>
+                                    
+                                        <div id="collapseOne" class="collapse show" data-parent="#fundamentals">
+                                        <div class="card-body">
+                                            Tworzymy jedną stronę, która swietnie wyswietla się na wszystkich urządzeniach. 
+                                            Mam tu namysli małe wyswietlacze np. telefonów przez tablety na dużych monitorach kończąc.
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                                            Kod łatwy do skalowania oraz prosty w utrzymaniu.
+                                            </button>
+                                        </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" data-parent="#fundamentals">
+                                        <div class="card-body">
+                                            Nasz kod powinien być czysty (wliczając w to odpowiednie formatowanie), łatwy do zrozumienia oraz możliwy do zastosowania w innym projekcie bez kopiowania tony zbędnego badziewia...
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed text-info" type="button" data-toggle="collapse" data-target="#collapseThree">
+                                            Wydajny
+                                            </button>
+                                        </h5>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" data-parent="#fundamentals">
+                                        <div class="card-body">
+                                            Wydajnosć jest jednym z kluczowych elementów wpływających na odbiór strony przez potencjalnego Klienta. 
+                                            Nasze strony powinny być ładne, funkcjonalne i przedewszystkim szybkie/wydajne
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="selektory">
+                            <h4 class="pl-2 mt-4">Selektory CSS</h4>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>
+                                        W tym paragrafie skupimy się na najważniejszych selektorach.
+                                        Nie będziemy jednak przedstawiać tu wszystkich możliwych selektorów, bo jest ich zwyczajnie zbyt dużo.
+                                    </p>
+
+                                    <p>Zaczynając od podstaw selektory możemy podzielić na kilka grup:</p>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <span class="text-info">element</span>: selektorem w tym przypadku może być np: <span class="text-info">p, button, a</span> itp.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="text-info">klasa</span>: selektorem w tym przypadku może być np: <span class="text-info">.mojaSuperKlasa, .dark</span> itp.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="text-info">id</span>: selektorem w tym przypadku może być np: <span class="text-info">#mojElementHtml, #light</span> itp.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="text-info">atrybut</span>: selektorem w tym przypadku może być np: 
+                                                <span class="text-info">
+                                                    [data-parent$='fundamentals'],
+                                                    input[type=text],
+                                                    [class|=top],
+                                                    [title~=xyz]
+                                                </span> itp.
+                                            <p></p>
+                                        </li>
+                                    </ul>
+
+                                    <pre class="my-3"><code>
+&lt;div id="collapseOne" class="collapse show" data-parent="#fundamentals">&lt;/div>
+&lt;input type="text" class="form-control" name="userName" required>
+&lt;p class="top-border">&lt;/p>
+&lt;img src="./xx/yy/zz.jpg" alt="some image" title="xyz">
+                                    </code></pre>
+
+                                    <p>Dodatkowo poza podstawowymi selektorami, możemy zastosować selektory łączone w poniższych kombinacjach</p>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Dla przykładu div + p, zaznaczy każdy element p zaraz po div</li>
+                                    </ul>
+
+                                    <pre class="my-3"><code>
+&lt;div>
+    &lt;h2>Tytuł w elemencie div&lt;/h2>
+    &lt;p>tresć pod tytułem&lt;/p>
+&lt;/div>
+
+&lt;p>A ten tekst będzie zaznaczony przez selektor.&lt;/p>
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </section>
                 </div>
             </div>
         </div>
     </section>
 
+    <div id="goUp">
+        <i class="fas fa-angle-double-up fa-3x"></i>
+    </div>
+
     <script src="../../js/vendor/jquery-3.3.1.min.js"></script>
     <script src="../../js/vendor/popper.min.js"></script>
     <script src="../../js/vendor/bootstrap.min.js"></script>
-
-    <script>
-        //some script here
-    </script>
+    <script src="../../js/vendor/highlight.pack.js"></script>
+    <script src="../../js/module2examples.js"></script>
+    <script src="../../js/general.js"></script>
 </body>
   
 </html>
