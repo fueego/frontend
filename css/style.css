@@ -36,5 +36,20 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    visibility: hidden;
     cursor: pointer; }
+  body .hideMe {
+    display: none; }
+  body .animateMe {
+    animation: fadeIn .3s ease-out; }
+
+@keyframes fadeIn {
+  0% {
+    bottom: 0px;
+    opacity: 0; }
+  1% {
+    display: block; }
+  50% {
+    bottom: 15px;
+    opacity: 0.4; }
+  100% {
+    opacity: 0.8; } }

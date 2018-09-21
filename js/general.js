@@ -17,12 +17,14 @@ $(document).ready(function() {
         }
     });
 
-    //scroll up
+    //scroll up    
     $(window).on('scroll', () => {
-        if($('#goUp').offset().top >= 1500) {
-            $('#goUp').css('visibility', 'visible');
+        if($(window).scrollTop() >= 1500) {
+            $('#goUp').removeClass('hideMe');
+            $('#goUp').addClass('animateMe');
         } else {
-            $('#goUp').css('visibility', 'hidden');
+            $('#goUp').addClass('hideMe');
+            $('#goUp').removeClass('animateMe')
         }
     });
 
