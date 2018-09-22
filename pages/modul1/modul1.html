@@ -59,7 +59,7 @@
                                     <div class="dropdown-item"><a href="modul1.html#selektory" class="text-secondary">SelektoryCSS</a></div>
                                     <div class="dropdown-item"><a href="modul1.html#przestrzen" class="text-secondary">Zarządzanieprzestrzenią</a></div>
                                     <div class="dropdown-item"><a href="modul1.html#elementy" class="text-secondary">Elementyblokowe, liniowe</a></div>
-                                    <div class="dropdown-item"><a href="modul1.html#pozycjonowanie" class="text-secondary">Pozycjonowaniei rozkład elementów na stronie</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#pozycjonowanie" class="text-secondary">Pozycjonowanie i rozkład elementów na stronie</a></div>
                                     <div class="dropdown-item"><a href="modul1.html#jednostki" class="text-secondary">Jednostkimiary w CSS</a></div>
                                     <div class="dropdown-item"><a href="modul1.html#zasadadzialania" class="text-secondary">Mechanizm działania CSS</a></div>
                                     <div class="dropdown-item"><a href="modul1.html#animacje" class="text-secondary">Animacje CSS</a></div>
@@ -456,6 +456,119 @@ p {
                                         Elementy blokowe <span class="text-info">&lt;h1 - h6>, &lt;div>, &lt;p>, &lt;ul></span>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="pozycjonowanie">
+                        <h4 class="pl-2 mt-4">Pozycjonowanie i rozkład elementów na stronie</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Pozycjonowanie w CSS pozwala nam dokładnie okreslić miejsce elementu na stronie. 
+                                    Elementy mogą być rozmieszczane w relacji względem swojej pozycji, absolutnie względem elementu nadrzędnego
+                                    jak i również posiadać pozycję ustaloną względem okna przeglądarki.
+                                </p>
+
+                                <div class="card">
+                                    <div class="card-header">Metody pozycjonownia - zastosowanie własciwosci "position"</div>
+                                    <div class="card-body">
+                                        Za pomocą property <span class="text-info">position</span> możliwe jest ustalenie pozycji w relacji 
+                                        do elementu poprzedzającego, pozycji absolutnej względem elementu przodka lub pozycji ustalonej względem
+                                        okna przeglądarki. W celu zastosowania tych możliwosci możemy zastosować.
+
+                                        <hr class="my-4">
+
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <span class="text-info">static</span> : Jest to podstawowa opcja przypisana na start dla każdego elementu.
+                                                Zastosowanie, którejs z opcji <span class="text-info">left, right, top, bottom, z-index</span> jest... bezcelowe :)
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="text-info">relative</span> : Jest podobny do property static, element pozostaje nadal w normalnym położeniu ale zastosowanie  <span class="text-info">left, right, top, bottom, z-index</span> jest... zasadne :)
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="text-info">absolute</span> : To co tygryski lubią najbardziej ;), dzięki zastosowaniu tej własciwosci element jest "wyjęty" 
+                                                z normalnego rozkładu w dokumencie. Dzięki temu element wygląda jak by był postawiony warstwę wyżej <span class="text-info">left, right, top, bottom, z-index</span> jest... zasadne :)
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="text-info">fixed</span> : Jest podobny do property absolute, element jest również "wyjęty" z normalnego rozkładu w dokumencie. Różnica polega na tym, że jest on pozycjonowany 
+                                                bezposrednio względem okna przeglądarki i pozostaje w tym samym miejscu podczas scrollowania strony.
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="text-info">sticky (props experymentalny, należy sprawdzać przeglądarkę, z którą będziemy go używać)</span> : 
+                                                element jest traktowany jak normalny relatywny element, do momentu kiedy nie osiągnie górnej bariery przeglądarki, lub elementu scrollowanego, w którym jest umieszczony.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="jednostki">
+                        <h4 class="pl-2 mt-4">Jednostki miary w CSS</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Stare dobre <span class="text-info">"px"</span> są nadal dobre ;), ale dobre można zamienić na lepsze. Szczególnie powinnismy rozważyć zmianę starych jednostek miary na
+                                    <span class="text-info">"rem"</span> przy projektowaniu serwisów responsywnych. Ułatwi to skalowanie odległosci, wielkosci itp, za pomocą zmiany jednego parametru...
+                                </p>
+
+                                <p>Poniżej zapoznamy się z istotnymi jednostkami, które pomogą rozwiać tajemnicze symbole jak "rem", "am" itp.</p>
+
+                                <div class="accordion" id="jednostki">
+                                    <div class="card">
+                                        <div class="card-header" id="em">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link text-info" type="button" data-toggle="collapse"
+                                                    data-target="#pokazEm">
+                                                    Jednostki "em"
+                                                </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="pokazEm" class="collapse show" data-parent="#jednostki">
+                                            <div class="card-body">
+                                                jednostki em
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="rem">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed text-info" type="button"
+                                                    data-toggle="collapse" data-target="#pokazRem">
+                                                    Jednostki "rem"
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="pokazRem" class="collapse" data-parent="#jednostki">
+                                            <div class="card-body">
+                                                jednostki rem
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="rem">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed text-info" type="button"
+                                                    data-toggle="collapse" data-target="#pokazVwh">
+                                                    Jednostki "vw" oraz "vh"
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="pokazVwh" class="collapse" data-parent="#jednostki">
+                                            <div class="card-body">
+                                                jednostki vw oraz vh
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
                             </div>
                         </div>
                     </section>
