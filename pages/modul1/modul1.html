@@ -530,7 +530,20 @@ p {
 
                                         <div id="pokazEm" class="collapse show" data-parent="#jednostki">
                                             <div class="card-body">
-                                                jednostki em
+                                                <p>
+                                                    Jednostka "em" jest to jedna z jednostek względnych. Jej rozmiar zależy od rozmiaru czcionki zastosowanej bezposrednio
+                                                    lub odziedziczonej od rodzica, który definiował zmianę wielkosci fontu. Dla elementu, którego czcionka wynosi 20px, 1 em oznacza 20px.
+                                                    Jeśli użytkownik korzysta z dużej czcionki (np. na dużym monitorze) albo małej czcionki (np. na urządzeniu mobilnym), to podane wielkości będą proporcjonalne.
+                                                </p>
+
+                                                <p>Przykład zastosowania</p>
+
+                                                <pre><code>
+.mojDiv {
+    margin: 1em; // odpowiada wartosci 20px
+    line-height: 1.2em; // odpowiada 24px, bo 20 * 1.2 = 24...
+}
+                                                </code></pre>
                                             </div>
                                         </div>
                                     </div>
@@ -545,7 +558,13 @@ p {
                                         </div>
                                         <div id="pokazRem" class="collapse" data-parent="#jednostki">
                                             <div class="card-body">
-                                                jednostki rem
+                                                <p>
+                                                    Dodanie jednostek "em" nie było ostatecznym słowem i w 2013 do css dodano "root em", co finalnie przełożyło się na nazwę "rem".
+                                                    Jednostki <span class="text-info">"rem"</span>, są bardzo podobne do <span class="text-info">"em"</span>. 
+                                                    Podstawowa różnica pomiędzy nimi polega na tym z jakiego miejsca brana jest referencja wielkości czcionki. Dla "em" jest to element, 
+                                                    bieżący lub najbliższy wrapper, który definiował wielkość czcionki natomiast dla "rem", jest to zawsze wielkość zdefiniowana jako 
+                                                    wielkość tzw. bazowej czcionki dokumentu
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -560,18 +579,459 @@ p {
                                         </div>
                                         <div id="pokazVwh" class="collapse" data-parent="#jednostki">
                                             <div class="card-body">
-                                                jednostki vw oraz vh
+                                                <p>
+                                                    Inne nowe jednostki pozwalają zapisać reguły zależne od rozmiaru okna użytkownika. 
+                                                    Mowa o <span class="text-info">"vw"</span> i <span class="text-info">"vh"</span>. 
+                                                    Ten pierwszy stanowi jedną setną szerokości okna, natomiast drugi jedną setną wysokości. 
+                                                    Dodano także jednostkę vmin, odpowiadającą mniejszej z wartości vw i vh oraz vmax
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
                             </div>
                         </div>
                     </section>
+
+                    <section id="zasadadzialania">
+                        <h4 class="pl-2 mt-4">Mechanizm działania CSS</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    W celu lepszego zrozumienia, mechaniki działania CSS przyglądnijmy się poniższemu diagramowi.
+                                </p>
+
+                                <hr>
+
+                                <div class="diagram">
+                                    <div class="simpleElem">
+                                        <h3>Ładowanie HTML</h3>
+                                    </div>
+
+                                    <div class="arrowPlace">
+                                        <i class="fa fa-arrow-right fa-2x"></i>
+                                    </div>
+
+                                    <div class="simpleElem">
+                                        <h3>Parsowanie HTML</h3>
+                                    </div>
+
+                                    <div class="arrowPlace">
+                                        <i class="fa fa-arrow-right fa-2x"></i>
+                                    </div>
+
+                                    <div class="simpleElemDark">
+                                        <h3>Document Object Model (DOM)</h3>
+                                    </div>
+                                </div>
+
+                                <div class="diagram">
+                                    <div class="simpleElem">
+                                        <h3>Ładowanie CSS</h3>
+                                    </div>
+
+                                    <div class="arrowPlace">
+                                        <i class="fa fa-arrow-right fa-2x"></i>
+                                    </div>
+
+                                    <div class="simpleElemWarning">
+                                        <div class="insideSimpleWarning">
+                                            <h3>Parsowanie CSS</h3>
+                                        </div> 
+                                    </div>
+
+                                    <div class="arrowPlace">
+                                        <i class="fa fa-arrow-right fa-2x"></i>
+                                    </div>
+
+                                    <div class="simpleElemDark">
+                                        <h3>CSS Object Model (CSSOM)</h3>
+                                    </div>
+                                </div>
+
+                                <div class="diagram">
+                                    <div class="simpleElemWarning">
+                                        <div class="insideSimpleWarning">
+                                            <p>Eliminacja konfliktów, dla deklaracji selektorów</p>
+                                        </div> 
+                                    </div>
+
+                                    <div class="simpleElemWarning">
+                                        <div class="insideSimpleWarning">
+                                            <p>Procesowanie ostatecznych wartosci CSS</p>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <p>Na ten moment skupimy się nad dokładnym wytłumaczeniem sentencji "Eliminacja konfliktów w CSS" oraz "procesowanie ostatecznych wartosci CSS"</p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="text-info">
+                                            Eliminacja konfliktów, dla zastosowanych slektorów
+                                        </span>
+                                        Często zdaża się tak, że pisząc naszą częsć projektu zastosowalismy pewien zestaw nazw selektorów,
+                                        bez prefiksów, dosć ogólne nazwy - co potencjalnie mogło nas narazić na konflikt, wynikły przez nadpisanie naszych styli, stylami globalnymi (np, przez innego developera).
+                                        Wynikiem tego może być nieoczekiwana zmiana wyglądu strony ;).
+
+                                        <hr>
+
+                                        Na tym etapie kompilacji CSS, następuje rozwiązanie tego typu konfliktów, styl z wyższym priorytetem zostanie zastosowany do przypisanego elementu html
+
+                                        <hr>
+
+                                        <p>Poniżej znajdzie się lista przykładów, dotycząca zasad rozwiązywania konfliktów, jako pierwszy przedstawię przykład z propsem !important</p>
+
+                                        <pre><code>
+/*zastosowanie znacznika !important*/
+
+.button {
+    color: red;
+    font-size: 10;
+    background: orange !imporant; /* znacznik !important ma wyższy priorytet*/
+}
+
+#mainMenu .subMenu .button {
+    background: #000;
+    color: #fff;
+}
+                                        </code></pre>
+
+                                        <p>W przypadku kiedy nie stosujemy "!important" a mamy reguły odwołujące się do tego samego elementu html. Wybrana zostanie ta, która zdobędzie najwięcej punktów ;).</p>
+                                        <p>Punkty przydzielane są następująco: (0, 0, 0, 0) - (styl inline, ID, Klasa, Elementy html)</p>
+
+                                        <pre><code>
+/*Wynik: (0, 0, 1, 0)*/
+.button {
+    color: #fff;
+}
+
+/*Wynik: (0, 1, 2, 1)*/
+#mainMenu .subMenu a.button {
+    color: #dedede;
+}
+
+/*Wynik: (0, 0, 0, 1)*/
+a {
+    color: #00ffee
+}
+                                        </code></pre>
+
+                                        <p>Jeżeli zdaży się, że mamy selektory elementów z taką samą iloscią punktów, przypisany zostanie ten styl, który był renderowany pózniej</p>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <span class="text-info">
+                                                Procesowanie ostatecznych wartosci CSS
+                                        </span>
+                                        
+                                        <p>W tej sekcji zacznę od analizy przykładu, który zastąpi zbędne rozpisywanie się...</p>
+
+                                        <pre><code>
+&lt;section>
+    &lt;span class="checkMe">CSS zawsze spoko ;)&lt;/span>
+&lt;/section>
+                                        </code></pre>
+
+                                        <p>Oraz style do przykładu</p>
+
+                                        <pre><code>
+section {
+    font-size: 1.5rem;
+    background: red;
+    width: 300px;
+}
+
+span {
+    width: 200px;
+    background: yellow;
+}
+
+.checkMe {
+    width: 50%;
+}
+                                         </code></pre>
+
+                                         <p>
+                                             Ostatecznie element span, będzie miał 150px szerokosci(bo przeglądarka przeliczy sobie 50% z 300 px), 
+                                             wartosć font-size rem zostanie przekonwertowana do pixeli a kolory do odpowiednich wartosci.
+                                             (jeżeli font-size, nie zostało przypisane to wartosć początkowa powinna stanowić 16px)
+                                             W następnym kroku, przeglądarka inicjalizuje wartosci początkowe dla wszystkich innych propsów w css, 
+                                             jako iż każde property musi mieć przypisaną wartosć. 
+                                         </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="animacje">
+                        <h4 class="pl-2 mt-4">Animacje CSS</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    W tym rozdziale, chcę przybliżyć możliwosć stosowania animacji w czystym CSS.
+                                    Koncepcja jest zbliżona do animacji np, w Flashu :). Definiujemy swoją linię czasu, gdzie pózniej dodajemy swoiste keyframes z podziałką procentową...
+                                </p>
+
+                                <p>
+                                    Pierwszy krok polega na zdefiniowaniu "timeline" oraz nadanie odpowiedniej nazwy :). 
+                                    W pliku css, definiujemy przykładową animację używając słowa kluczowego <span class="text-info">"@keyframes"</span>
+                                </p>
+
+                                <pre><code>
+@keyframes mojaAnimacja {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .8;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+                                </code></pre>
+
+                                <p>W celu zastosowania przygotowanej animacji, do stylów animowanego elementu dodajemy następujące własciwosci</p>
+
+                                <pre><code>
+.animowanyElement {
+    animation-name: mojaAnimacja
+    animation-duration: 3s;
+}
+                                </code></pre>
+
+                                <div class="animowanyElement"></div>
+
+                                <hr>
+
+                                <p>Przykład troszkę bardziej skomplikowanej animacji</p>
+
+                                <pre><code>
+@keyframes mojaAnimacja {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .8;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+                                </code></pre>
+
+
+                                <div class="animowanyElement2">
+                                    <div class="animowanyBox"></div>
+                                </div>
+
+                                <pre class="my-3"><code>
+@keyframes mojaAnimacja2 {
+    0% {
+        opacity: 0;
+        left: 0;
+    }
+
+    25% {
+        opacity: 1;
+        left: 90%;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    75% {
+        opacity: 0.5
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+@keyframes rotateItem {
+    50% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        transform: rotate(360deg);
+    }
+}
+                                </code></pre>
+
+                                <pre><code>
+.animowanyElement2 {
+    position: relative;
+    animation-name: mojaAnimacja2;
+    animation-duration: 4s;
+}
+
+.animowanyBox {
+    width: 60px;
+    height: 60px;
+    background:red;
+    opacity: 1;
+    transform-origin: center center;
+
+    animation-name: rotateItem;
+    animation-duration: 4s;
+}
+                                </code></pre>
+
+                                <hr>
+
+                                <p>Animacja ma kilka własciwosci, które pozwalają kontrolować przebiegiem animacji</p>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="text-info">animation-delay</span>: własciwosc ta pomaga opóznic start animacji
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="text-info">animation-iteration-count</span>: własciwoscią tą, możemy zapętlić animację n razy, dla ciągłej animacji możemy zastosować wartosć "infinite"
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="text-info">animation-direction</span>: Za pomocą tej własciwosci, możemy odtworzyć animację od tyłu.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="rwd">
+                        <h4 class="pl-2 mt-4">RWD</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Responsive web design (RWD) – jest to technika projektowania strony www, tak aby jej wygląd i układ dostosowywał się automatycznie do rozmiaru okna przeglądarki, 
+                                    na której jest wyświetlany np. przeglądarki, smartfonów czy tabletów. Strona tworzona w takiej technice jest uniwersalna i wyświetla się dobrze zarówno na dużych ekranach, 
+                                    jak i na tych mniejszych.
+                                </p> 
+
+                                <p>
+                                    Obsługa tej techniki odbywa się za pomocą <span class="text-info">media queries</span>, które pozwalają rozpoznać rozdzielczość okna przeglądarki i zastosować odpowiednie style css.
+                                </p>
+
+                                <p>Domyslam się, że nie jednokrotnie widzieliscie już poniższy kawałek kodu</p>
+
+                                <pre><code>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1" />
+                                </code></pre>
+
+                                <p>
+                                    Właściwość width (szerokość) kontroluje wielkość widocznego pola. Można jej przyisać konkretną liczbę np. width=600, 
+                                    albo specjalne słowo kluczowe - device-width, które oznacza nadanie wielkości ekranu w pikselach przy zoomie na poziomie 100%. 
+                                    (Istnieją również height i device-height, które przydadzą się w przypadku gdy wielkość danego elementu zależy od wysokości ekranu.)
+                                    Właściwość <span class="text-info">initial-scale</span> kontroluje poziom zbliżenia po załadowaniu strony.
+                                </p>
+
+                                <hr>
+
+                                <p>Poniżej przykład zastosowania media queries</p>
+
+                                <pre><code>
+@media screen and (max-width: 400px) {
+    a.button {
+        background-color: red;
+        color: #fff;
+        font-size: 2rem;
+    }
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="architektura">
+                        <h4 class="pl-2 mt-4">Architektura CSS, zaznajomienie się z BEM</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>BEM - "Block Element Modifier" jest to jedna z konwencji nazewnictwa klas css stosowanych do poszczególnych elementów składowych strony.</p>
+                                <p>Zasady ogólne BEM skłaniają nas do używania tylko klass, nie powinno stosować się identyfikatorów czy nazw elementów</p>
+                                <p>W BEM stosujemy następującą konwencję do budowy nazw klass przypisanych do elm, html</p>
+
+                                <ul class="list-block">
+                                    <li class="list-block-item">
+                                        <span class="text-info">.block</span>: Pierwszy człon opisuje blok ( może to być logiczna nazwa danej sekcji kodu )
+                                    </li>
+                                    <li class="list-block-item">
+                                        <span class="text-info">__element</span>: Drugi człon poprzedzony dwoma "podkreślnikami" oznacza, że dana klasa dotyczy danego elementu
+                                    </li>
+                                    <li class="list-block-item">
+                                        <span class="text-info">--modifier</span>: Trzeci człon poprzedzony dwoma myslnikami oznacza, klasę modyfikatora
+                                    </li>
+                                </ul>
+
+                                <hr>
+
+                                <p>Przedstawioną konwencję zastosujemy do poniższego kawałka kodu</p>
+
+                                <pre><code>
+&lt;section>
+    &lt;input type="text" />
+    &lt;input type="password"/>
+    &lt;button type="button">Cancel&lt;/button>
+    &lt;button type="submit">Submit&lt;/button>
+&lt;/section>
+                                </code></pre>
+
+                                <p>Po zastosowaniu BEM</p>
+
+                                <pre><code>
+&lt;section class="loginComponent">
+    &lt;input class="loginComponent__input" type="text" />
+    &lt;input class="loginComponent__input loginComponent__input--passwd" type="password"/>
+    &lt;button class="loginComponent_button" type="button">Cancel&lt;/button>
+    &lt;button class="loginComponent_button loginComponent_button--submit" type="submit">Submit&lt;/button>
+&lt;/section>
+                                </code></pre>
+
+                                <p>Oraz zastosowane style</p>
+
+                                <pre><code>
+.loginComponent {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #dedede;
+}
+
+.loginComponent__input {
+    background-color: #dedede;
+    border-radius: 5px;
+    border: 1px solid #666666;
+}
+
+.loginComponent__input--passwd {
+    border: 1px solid #red;
+}
+
+.loginComponent_button {
+    width: 60px;
+    text-align: center;
+    background-color: #dedede;
+}
+
+.loginComponent_button--submit {
+    background-color: #4CAF50;
+}
+                                        
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    
                 </div>
             </div>
         </div>
