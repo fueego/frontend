@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/railscasts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Szkolenie Front-End</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a href="../../index.html" class="navbar-brand">Hello Front-End</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="../modul1/modul1.html" class="nav-link active">MODUŁ1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../modul2/modul2.html" class="nav-link">MODUŁ2</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                <i class="far fa-arrow-alt-circle-down"></i> PLIKI POMOCNICZE
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="../download.html#css" class="dropdown-item">Moduł1 - HTML/STYLE</a>
+                                <a href="../download.html#bootstrap" class="dropdown-item">Moduł2 - BOOTSTRAP/JS</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="nav rounded border mainMenu bg-white">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a href="javascript:void(0);" class="nav-link text-secondary" data-toggle="dropdown">CSS</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="modul1.html#wprowadzenie" class="text-secondary">Wprowadzeniedo CSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#zasady" class="text-secondary">Trzyzasady pisania dobrego kodu</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#selektory" class="text-secondary">SelektoryCSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#przestrzen" class="text-secondary">Zarządzanieprzestrzenią</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#elementy" class="text-secondary">Elementyblokowe, liniowe</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#pozycjonowanie" class="text-secondary">Pozycjonowanie i rozkład elementów na stronie</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#jednostki" class="text-secondary">Jednostkimiary w CSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#zasadadzialania" class="text-secondary">Mechanizm działania CSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#animacje" class="text-secondary">Animacje CSS</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#rwd" class="text-secondary">RWD</a></div>
+                                    <div class="dropdown-item"><a href="modul1.html#architektura" class="text-secondary">Architektura CSS, zaznajomienie się z BEM</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">SASS</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="sass.html#wprowadzenie" class="text-secondary">Wprowadzenie do SASS</a></div>
+                                    <div class="dropdown-item"><a href="sass.html#kompilaja" class="text-secondary">Bezbolesna kompilacja scss do css</a></div>
+                                    <div class="dropdown-item"><a href="sass.html#pierwsze" class="text-secondary">Pierwsze kroki, zmienne i zagnieżdżanie</a></div>
+                                    <div class="dropdown-item"><a href="sass.html#mixiny" class="text-secondary">Mixiny, Extendy i Funkcje</a></div>
+                                    <div class="dropdown-item"><a href="sass.html#sevenOne" class="text-secondary">Architektura 7-1 CSS przy użyciu Sass</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Flexbox</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="flexgrid.html#siatka" class="text-secondary">Flexbox? Po co to komu?</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#pozycjonowanie" class="text-secondary">Flexbox podstawowe wprowadzenie</a></div>
+                                    <div class="dropdown-item"><a href="flexgrid.html#flexbox" class="text-secondary">Zaznajomienie się z nowymi komendami</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Serwis WWW</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="#" class="text-secondary">Konfiguracja środowiska</a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-2 pt-5">
+                <div class="col">
+                    <section id="wprowadzenie">
+                        <h4 class="pl-2">Wprowadzenie do SASS</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Sass, less i inne przyprawy... Co to jest sass, najprosciej to taki trochę CSS na sterydach :), zwany dalej preprocesor języka CSS.
+                                    Straszne słowo preprocesor... Generalnie kod napisany w Sassie musi być przekompilowany do zwykłego CSS. Przeważnie przy większych projektach
+                                    konwertowaniem plików *.scss do *.css zajmuje się webpack ( czasem gulp ), które przy okazji robią wiele innych przydatnych rzeczy. Jednakże,
+                                    "setup" takiego srodowiska, wykracza poza ramy tego kursu.
+                                </p>
+
+                                <p>
+                                    My do tego celu zastosujemy programik o nazwie "koala", o którym mowa będzie w następnym dziale.
+                                </p>
+
+                                <p>
+                                    Wracając do samego Sass-a, pisanie arkuszy stylów w Sassie wznosi nas na wyższy poziom. Jest to dalej CSS ale możemy w łatwy sposób
+                                    posiłkować się zmiennymi, korzystać z zagnieżdżeń styli, tworzyć funkcje, które możemy implementować do inncyh klass. Co więcej Sass,
+                                    pozwala nawet na importowanie styli z zewnętrznego pliku ( podobnie jak moduły w JS ).
+                                </p>
+                            </div> 
+                        </div>
+                    </section>
+
+                    <section id="kompilaja">
+                        <h4 class="pl-2 mt-4">Bezbolesna kompilacja scss do css</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Jak wczeniej wspomniałem do kompilacji plików sass-a będziemy stosowali program "Koala".
+                                    Jest to program, który może być zainstalowany na Windowsie, Linuxie oraz Macu.
+                                </p>
+
+                                <p>
+                                    Kompilacja Sassa za posrednictwem Koali, jest dziecinnie prosta. Wystarczy dodać folder, z zródłem *.scss. 
+                                    Zaznaczając plik z listy po prawej stronie mamy listę, możliwych opcji jakie chcemy zastosować podczas kompilacji.
+                                </p>
+
+                                <p>
+                                    W celu przypisania scieżki, w której będziemy przechowywać pliki css, należy kliknąć na pliku z listy prawym klawiszem 
+                                    myszki, z dropdown-a wybrać opcję "Set Output Path"
+                                </p>
+                            </div> 
+                        </div>
+                    </section>
+
+                    <section id="pierwsze">
+                        <h4 class="pl-2 mt-4">Pierwsze kroki, zmienne i zagnieżdżanie</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    W tradycyjnym CSS, nie mamy możliwosci stosowania zmiennych, co szczególnie odczuwalne jest gdy chcemy zmienić 
+                                    kolorystykę elementów na stronie, lub charakterystyczny odstęp od sekcji w głównym kontenerze strony itp.
+                                </p>
+
+                                <p>Poniżej przykład zwykłego CSS</p>
+
+                                <pre><code>
+.mainContent a {
+    color: #fefefe;
+    font-size: 18px;
+    margin-top: 15px;
+
+    background-color: #fffeee;
+    border-radius: 5px;
+    border: 2px solid #dedede;
+}
+
+.mainContent .button {
+    border-radius: 10px;
+    background-color: #dedede;
+    borderd: 3px solid #000;
+}
+
+.footer li > a {
+    color: #fff;
+    background: #000;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+                                </code></pre>
+
+                                <p>
+                                    Zakładamy czysto teoretycznie, że chcemy ujednolicić kolor wszystkich odnosników wraz z klasami .button, 
+                                    dodatkowo chcemy mieć tą samą wartosć border-radius dla wszystkich elementów a. Za pomocą Sassa, osiągniemy to
+                                    w łatwy i przejrzysty sposób.
+                                </p>
+
+                                <pre><code>
+/*Zmienne najlepiej trzymać w oddzielnym pliku, pogrupowane w logiczne skecje*/
+/*Jeżeli nie mamy wielu arkuszy stylów, możemy trzymać to w jednym pliku*/
+
+/*Colors*/
+$link-background: pink;
+
+/*Size*/
+$border-radius: 2px;
+
+.mainContent a {
+    color: #fefefe;
+    font-size: 18px;
+    margin-top: 15px;
+
+    background-color: $link-background;
+    border-radius: $border-radius;
+    border: 2px solid #dedede;
+}
+
+.mainContent .button {
+    border-radius: $border-radius*2;
+    background-color: $link-background;
+    borderd: 3px solid #000;
+}
+
+.footer li > a {
+    color: #fff;
+    background: $link-background;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: $border-radius;
+}
+                                </code></pre>
+
+                                <p>Sass to nie tylko zmienne, bardzo przydatną funkcjonalnoscią jest zagnieżdżanie</p>
+
+                                <pre><code>
+.wrapper .mainMenu .headSection a {
+    color: #fff;
+    background: #000;
+}
+
+.wrapper .mainMenu .headSection .subHeader span {
+    color: #000fff;
+    padding: 10px;
+}
+
+.wrapper .mainMenu .footerSection a {
+    margin-bottom: 5px;
+    color: red;
+}
+
+.wrapper .mainMenu .footerSection a:hover {
+    margin-bottom: 5px;
+    color: red;
+}
+                                </code></pre>
+
+                                <p>
+                                    Dobrze znamy kilometrowe grupy selektorów. Generalnie ten styl ułatwia identyfikacjię.
+                                    Po pierwszym rzucie oka, widzimy że to rodzina styli dotyczących bloku .mainMenu, ale można to zrobić
+                                    łatwiej i czytelniej
+                                </p>
+
+                                <pre><code>
+.wrapper {
+    .mainMenu {
+        .headSection {
+            a {
+                color: #fff;
+                background: #000;
+            }
+
+            .subHeader {
+                span {
+                    color: #000fff;
+                    padding: 10px;
+                }
+            }
+        }
+
+        .footerSection {
+            a {
+                margin-bottom: 5px;
+                color: red;
+
+                &:hover {
+                    margin-bottom: 5px;
+                        color: red;
+                }
+            }
+        }
+    }
+}
+                                </code></pre>
+                            </div> 
+                        </div>
+                    </section>
+
+                    <section id="mixiny">
+                        <h4 class="pl-2 mt-4">Mixiny, Extendy i Funkcje</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="text-info">Mixiny</span>: Mixiny to nic innego jak małe kontenerki styli, które możemy z powodzeniem dodawać do innych klas. W mysl reguły "DRY"
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <span class="text-info">Funkcje</span>: to nic innego jak wbudowane dodatkowe funkcjonalnosci, jak np <span class="text-info">lighten</span>,
+                                        <span class="text-info">darken</span>, <span class="text-info">grayscale</span> oraz wiele więcej. Jeżeli mamy taką potrzebę, możemy sami napisać własną funkcję
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <span class="text-info">Extendy</span>: zbliżone są w swoim działaniu do mixinów, jednak nie kopiują one kodu ( w wygenerowanym kodzie css ),
+                                        a selektor. W wyniku czego mamy mniejszy plik wynikowy.
+                                    </li>
+                                </ul>
+
+                                <p class="pt-3">
+                                    Wyobrazmy sobie prostą sytuację, chcemy dodać .border-radius do linków, w nawigacji głównej oraz w footerze. Nie będziemy się duplikować
+                                    więc zastosujemy do tego <span class="text-info">Mixiny</span> :)
+                                </p>
+
+                                <pre><code>
+.mainNav .nav a {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+...
+
+.footer .footerNav a {
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 3px;
+}
+                                </code></pre>
+
+                                <p>Smentnie to wyglądało, ale poniżej zrobimy mały refaktoring ;)</p>
+
+                                <pre><code>
+@mixin borderRadius($size) {
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+    border-radius: $size;
+}
+
+.mainNav .nav a {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    @include borderRadius(5px);
+}
+
+...
+
+.footer .footerNav a {
+    border: 1px solid #000;
+    padding: 5px;
+    @include borderRadius(3px);
+}
+                                </code></pre>
+
+                                <p>
+                                    Funkcje w Sasie, to dodatkowe możliwosci jakie daje nam ten preprocesor, jeżeli mam być szczery, nigdy ich nie stosowałem,
+                                    szczerze to wczesniej myslałem, że mixiny to to samo jak i funkcje.
+                                </p>
+
+                                <p>
+                                    Funkcje w zastosowaniu są jednakowe jak i mixiny, bez @include. np: <span class="text-info">background: lighten($color, 10%)</span>
+                                </p>
+
+                                <pre><code>
+$black-bg: #000;
+
+.mainModule a {
+    background: lighten($black-bg, 25%); /* #404040 */
+}
+                                </code></pre>
+
+                                <p>
+                                    Jak widać na powyższym przykładzie kolor czarny został zamieniony na #404040. Poniżej przedstawię przykład własnej funkcji
+                                </p>
+
+                                <pre><code>
+@function add($l1, $l2) {
+    @return $l1 + $l2;
+}
+
+.mainModule a {
+    border: add(10px, 5px) solid #dedede;
+}
+                                </code></pre>
+
+                                <p>Extendy, współpracują scisle z "placeholderami". Przykład html.</p>
+
+                                <pre><code>
+&lt;div class="mainModule">
+    &lt;a>
+        Some Span here
+    &lt;/a>
+&lt;/div>
+    
+&lt;div class="footer">
+    &lt;a>
+        Some additiona text
+    &lt;/a>
+&lt;/div>
+                                </code></pre>
+
+                                <p>Style *.scss</p>
+
+                                <pre><code>
+%button-stailo {
+    border: 1px solid #dedede;
+    background-color: #000;
+    color: #fff;
+}
+
+.mainModule a {
+    @extend %button-stailo;
+}
+
+.footer a {
+    @extend %button-stailo;
+}
+                                </code></pre>
+
+                                <p>Wynikowy *.css</p>
+
+                                <pre><code>
+.mainModule a, .footer a {
+    border: 1px solid #dedede;
+    background-color: #000;
+    color: #fff;
+}
+                                </code></pre>
+                            </div> 
+                        </div>
+                    </section>
+
+                    <section id="sevenOne">
+                        <h4 class="pl-2 mt-4">Architektura 7-1 CSS przy użyciu Sass</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Zastosowanie wzorca 7 do 1, przy zastosowaniu Sassa, zanjduje się najlepiej w implementacji przy dużych projektach.
+                                    Przed tym jednak musimy dowiedzieć się jak importować zewnętrzne pliki *.scss
+                                </p>
+
+                                <p>
+                                    Jak to wszystko w Sass, import pliku odbywa sie w dosć prosty sposób, wystarczy tylko w głównym pliku *.scss 
+                                    zaimportować zewnętrzny plik *.scss, który swoją nazwę zaczyna od "podkreslnika" np: <span class="text-info">"_color.scss"</span>
+                                    <span class="text-info">"_mixin.scss"</span>
+                                </p>
+
+                                <pre><code>
+@import "color";
+@import "mixin";
+...
+                                </code></pre>
+
+                                <p>Teraz gdy importowanie nie stanowi tajemnicy, przejdzmy do meritum.</p>
+                                <p>
+                                    Cała logika tego postępowania polega na podzieleniu kodu *.scss na 7 filarów, 
+                                    które to zas stanowią merytoryczny podział arkuszów styli odwołujących się do poszczególnych częsci strony
+                                </p>
+                                <p>
+                                    Wszystkie "częsci" kodu *.scss są następnie ładowane w głównym pliku <span class="text-info">main.scss</span>
+                                </p>
+
+                                <pre><code>
+sass/
+|
+|– abstracts/
+|   |– _variables.scss    # Sass Variables
+|   |– _functions.scss    # Sass Functions
+|   |– _mixins.scss       # Sass Mixins
+|   |– _placeholders.scss # Sass Placeholders
+|
+|– base/
+|   |– _reset.scss        # Reset/normalize
+|   |– _typography.scss   # Typography rules
+|   …                     # Etc.
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+|   |– _carousel.scss     # Carousel
+|   |– _cover.scss        # Cover
+|   |– _dropdown.scss     # Dropdown
+|   …                     # Etc.
+|
+|– layout/
+|   |– _navigation.scss   # Navigation
+|   |– _grid.scss         # Grid system
+|   |– _header.scss       # Header
+|   |– _footer.scss       # Footer
+|   |– _sidebar.scss      # Sidebar
+|   |– _forms.scss        # Forms
+|   …                     # Etc.
+|
+|– pages/
+|   |– _home.scss         # Home specific styles
+|   |– _contact.scss      # Contact specific styles
+|   …                     # Etc.
+|
+|– themes/
+|   |– _theme.scss        # Default theme
+|   |– _admin.scss        # Admin theme
+|   …                     # Etc.
+|
+|– vendors/
+|   |– _bootstrap.scss    # Bootstrap
+|   |– _jquery-ui.scss    # jQuery UI
+|   …                     # Etc.
+|
+`– main.scss              # Main Sass file
+                                </code></pre>
+                                
+                            </div> 
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="goUp" class="hideMe">
+        <i class="fas fa-angle-double-up fa-3x"></i>
+    </div>
+
+    <script src="../../js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="../../js/vendor/popper.min.js"></script>
+    <script src="../../js/vendor/bootstrap.min.js"></script>
+    <script src="../../js/vendor/highlight.pack.js"></script>
+    <script src="../../js/general.js"></script>
+</body>
+
+</html>
