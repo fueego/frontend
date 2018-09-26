@@ -237,3 +237,50 @@ body {
     animation-name: rotateItem;
     animation-duration: 4s;
 }
+
+//flexbox module1
+.mainFlexContainer,
+.mainFlexContainer2 {
+    display: flex;
+    min-height: 200px;
+    width: 100%;
+    border: 2px solid silver;
+
+    & > div {
+        padding: 10px;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    div:nth-of-type(1) {
+        background: rgb(5, 102, 180);
+    }
+
+    div:nth-of-type(2) {
+        background: rgb(28, 70, 133);
+    }
+
+    div:nth-of-type(3) {
+        background: rgb(4, 36, 71);
+    }
+}
+
+.mainFlexContainer2 {
+    & > div {
+        padding: 20px;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    div:nth-of-type(1) {
+        background: rgb(180, 17, 5);
+    }
+
+    div:nth-of-type(2) {
+        background: rgb(133, 28, 28);
+    }
+
+    div:nth-of-type(3) {
+        background: rgb(71, 4, 4);
+    }
+}
