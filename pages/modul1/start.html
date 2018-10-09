@@ -59,6 +59,7 @@
                                 </div>
                             </div>
                         </li>
+
                         <li class="nav-item">
                             <div class="dropdown">
                                 <a href="javascript:void(0);" class="nav-link text-secondary" data-toggle="dropdown">CSS</a>
@@ -113,141 +114,157 @@
 
             <div class="row mt-2 pt-5">
                 <div class="col">
-                    <section id="flexbox">
-                        <h4 class="pl-2">Flexbox? Po co to komu?</h4>
+                    <section id="szkielet">
+                        <h4 class="pl-2">Struktura pliku HTML</h4>
                         <div class="card">
                             <div class="card-body">
                                 <p>
-                                    Jeszcze nie każda przeglądarka ma pełne wsparcie dla syntaxu flexa ale zapewne w niedalekiej przyszłosci to się zmieni na lepsze :).
-                                    Ale co to ten flexbox? Flexbox jest to powiedzmy zestaw nowych wartosci css, które po wstępnym opanowaniu dają jeszcze większą przyjemnosć
-                                    z kodowania.
+                                    W sieci, możemy spotkać się z różnymi szablonami / szkieletami stron internetowych. Z tego względu, iż wiele podobnych rzeczy,
+                                    można rozwiązać na wiele różnych sposobów. Ostatecznie strona będzie się wyswietlała ale... Diabeł tkwi w szczegółach. Poniżej
+                                    znajdziemy przykład bardzo podstawowej templatki, można to potraktować jako minimalistyczny starter dla innych projektów.
+                                </p>
+
+                                <pre><code>
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    
+&lt;/body>
+&lt;/html>
+                                </code></pre>
+
+                                <p>
+                                    Idąc od pierwszej linijki, <span class="text-info">&lt;!DOCUMENT html></span> informuję przeglądarkę internetową, że ma do czynienia
+                                    z stroną internetową w standardzie HTML5, czasem można spotkać z czyms takim
+                                </p>
+
+                                <pre><code>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+                                </code></pre>
+
+                                <p>Jest to odpowiednik definicji dokumentu z poprzedniego standardu HTML4, nie ma się co bać :)</p>
+
+                                <p>
+                                    Następna linijka <span class="text-info">&lt;html lang="en"></span> dotyczy deklarowanego języka na stronie. 
+                                    Standard wymaga aby każda strona miała zadeklarowany język stosowany na stronie. Skróty języków oraz odpowiedniki Państw definiuje
+                                    specyfikacja <span class="text-info">ISO 639-1</span>
                                 </p>
 
                                 <p>
-                                    <span class="text-info">Flexbox</span> jest to taki elastyczny model pudełkowy, który z powodzeniem może być zastosowany do projektowania interfejsów aplikacji
-                                    lub całych stron internetowych. Model ten jest oparty o pewną strukturę. Do pojemnika "rodzica" dodajemy pozostałe elementy "dzieci", które
-                                    mogą być układane w pionie lub poziomie. Dzieci nie wystają poza pojemnik rodzica. Dzieci, mogą dopasowywać się do szerokosci rodzica, układać
-                                    się w równych odstępach, bądz przeskakiwać do nowej linii. Generalnie stosując wartosci flexa możemy osiągnąć szybko cos co w standardowym
-                                    CSS zajęło by sporo więcej kodu ( nie tylko css ale i html ) i było by logicznie bardziej skomplikowane.                          
+                                    Kolejnym parametrem, "meta tagiem" jest <span class="text-info">charset</span>, służy do oznajmienia przeglądarce, jakiego typu
+                                    kodowanie znaków nas interesuje. Poniżej odpowiednik dla wersji HTML4
+                                </p>
+
+                                <pre><code>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                                </code></pre>
+
+                                <p>
+                                    Kolejnym bardzo interesującym meta tagiem jest <span class="text-info">viewport</span>. Znacznik viewport określa sposób wyswietlania
+                                    strony na urządzeniach mobilnych – pozwala ustawić opcje skalowania, w tym także domyślne przybliżenie.
+                                </p>
+
+                                <p>
+                                    W przykładowym szablonie dyrektywa meta-tagu o nazwie "content" definiuje szerokosć okna zgodną z definiowaną szerokoscią urządzenia,
+                                    na którym strona jest prezentowana oraz inicjuje zoom na poziomie 1. Nie ma przeszkody w tym, żeby zdefiniować np cos takiego.
+                                </p>
+
+                                <pre><code>
+&lt;meta name="viewport" content="width=280, height=320, initial-scale=8.0">
+                                </code></pre>
+
+                                <p>
+                                    Jednak nie widzę, obecnie zastosowania dla tego typu ustawień. Generalnie dokładnie to zastosowania, jakie jest wpisane w główny 
+                                    przykład powinno być stosowane.
+                                </p>
+
+                                <p>
+                                    Jak by nie było, to mamy też cos dla fanów IE. <span class="text-info">X-UA-Compatible</span> wymusza na Internet Explorer aby renderował
+                                    stronę internetową zgodnie z standardami silnika przeglądarki "edge". Dostępne tryby dla tego parametru to między innymi "content='ie=7,8,9..'"
+                                </p>
+
+                                <hr>
+
+                                <p>
+                                    Reasumując w sekcji <span class="text-info">HEAD</span> ląduje kod konfiguracji przeglądarki. Dodatkowo jest to odpowiednie miejsce do 
+                                    wrzucenia wszelkiej masci akruszy styli, tytułu strony ( SEO ), czy ikonki wyswietlanej w lewym, górnym rogu w pasku url ( favicon )
+                                </p>
+
+                                <p>
+                                    Pozostały kod strony internetowej wstawiamy do sekcji <span class="text-info">BODY</span>. Przed końcowym znacznikiem body, powinny
+                                    znalezć się wszystkie skrypty JS ( w tym nasz custom JS, biblioteki frameworków itp...).
                                 </p>
                             </div> 
                         </div>
                     </section>
 
-                    <section id="wprowadzenie">
-                        <h4 class="pl-2 mt-4">Flexbox podstawowe wprowadzenie</h4>
+                    <section id="elementy">
+                        <h4 class="pl-2 mt-4">Przedstawienie podstawowych elementów języka HTML</h4>
                         <div class="card">
                             <div class="card-body">
-                                <p>
-                                    W celu aktywacji <span class="text-info">flexboxa</span> dla wybranego pojemnika należy dodać wartosć <span class="text-info">display: flex</span>.
-                                    Kontener, który posiada tą wartosć to nasz pojemnik "rodzic", do niego będziemy dodawać kolejne elementy.
-                                </p>
+                                <table class="table">
+                                    <p>
+                                        Specyfikacja html, odnosnie elementów możliwych do zastosowania, jest mega opasła i z doswiadczenia wiem, że w normalnej pracy
+                                        wystarczy nam kilka elementów, które można zaopatrzyć w odpowiednie style, tak aby zrealizować nawet skomplikowane projekty.
+                                    </p>
 
-                                <p>
-                                    W tak przygotowanym kontenerze, możemy z łatwoscią układać elementy ( "dzieci" ) w dwóch osiach X oraz Y, doskonale symbolizuje to
-                                    poniższa grafika 
-                                </p>
+                                    <p>
+                                        W html5 do standardowych elementów jak div, p, span, small, ul, li, h1-x, hr, br, strong... dodano nowe. To własnie te nowe,
+                                        najczęsciej stosowane przedstawię w tabelce poniżej.
+                                    </p>
 
-                                <p>
-                                    <img src="../../img/flex-axes.png" alt="flex" class="img-fluid rounded d-block mx-auto">
-                                </p>
-                            </div> 
-                        </div>
-                    </section>
-
-                    <section id="komendy">
-                        <h4 class="pl-2 mt-4">Zaznajomienie się z nowymi komendami</h4>
-                        <div class="card">
-                            <div class="card-body">
-                                <p>
-                                    Dobrze, skoro wiemy, jak aktywować flexboxa oraz w jakich kierunkach można się poruszać to zaznajomimy się teraz z kilkoma podstawowymi
-                                    wartosciami
-                                </p>
-
-                                <p>
-                                    <img src="../../img/flex-container.png" alt="flex-ax" class="img-fluid rounded">
-                                </p>
-
-                                <div class="mainFlexContainer">
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
-                                </div>
-
-                                <hr>
-
-                                <p>
-                                    Tyle słowem wstępu, przyszła pora na zapoznanie się z 
-                                    <span class="text-info">justify-content=['flex-start', 'flex-end', 'space-between', 'space-around', 'space-evenly']</span>
-                                </p>
-
-                                <div class="mainFlexContainer2">
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
-                                </div>
-
-                                <hr>
-
-                                <p>
-                                    Dodatkowo, jeżeli potrzebujemy zmodyfikować tylko wybrany element za pomocą <span class="text-info">align-self=['flex-start', 'flex-end', 'center', 'stretch', 'baseline']</span>
-                                    to również istnieje taka możliwosć
-                                </p>
-
-                                <div class="mainFlexContainer">
-                                    <div style="flex-grow: 1">1</div>
-                                    <div style="flex-grow: 2">2</div>
-                                    <div style="flex-grow: 1">3</div>
-                                </div>
-
-                                <hr>
-
-                                <p>
-                                    Jeżeli chcemy wypełnić maksymalną zawartosć "pudełka" rodzica, możemy zastosować do tego wartosć <span class="text-info">flex-grow='1,2,3...'</span>
-                                    powyższy przykład przedstawia zastosowanie kolejnych wartosci 1,2,1
-                                </p>
-
-                                <div class="mainFlexContainer2">
-                                    <div style="flex-grow:1; order: 2">1</div>
-                                    <div style="flex-grow:1; order: 1">2</div>
-                                    <div style="flex-grow:1; order: 3">3</div>
-                                </div>
-
-                                <hr>
-
-                                <p>
-                                    W celu zamiany kolejnosci, według własnego widzi mi się możemy posiłkować się własnoscią <span class="text-info">order: '1,2,3...'</span>
-                                </p>
-
-                                <p>
-                                    Flexbox z dogmatu stara się pomiescić w "pudełku" rodzica tak dużo dzieci jak tylko możliwe, co czasem może powodować pewne napięcia :).
-                                    Możemy zmienić takie zachowanie stosując <span class="text-info">flex-wrap=['nowrap', 'wrap', 'wrap-reverse']</span>
-                                </p>
-
-                                <div class="mainFlexContainer" style="flex-wrap: wrap">
-                                    <div style="width: 450px">1</div>
-                                    <div style="width: 450px">2</div>
-                                    <div style="width: 450px">3</div>
-                                </div>
-
-                                <hr>
-
-                                <p>
-                                    Kolejną z ciekawych opcji do zastosowania jest <span class="text-info">align-content=['flex-start', 'flex-end', 'center', 'stretch', 'space-between', 'space-around']</span>
-                                </p>
-
-                                <div class="mainFlexContainer2" style="height: 300px; flex-wrap: wrap; align-content: space-evenly;">
-                                    <div style="width: 400px">1</div>
-                                    <div style="width: 400px">2</div>
-                                    <div style="width: 450px">3</div>
-                                </div>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">element</th>
+                                            <th scope="col">opis</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>header</td>
+                                            <td>Definiuje obszar dla konfiguracji meta-tagów, tytułu oraz styli</td>
+                                        </tr>
+                                        <tr>
+                                            <td>nav</td>
+                                            <td>Definiuje nawigację na stronie</td>
+                                        </tr>
+                                        <tr>
+                                            <td>main</td>
+                                            <td>Definiuje główny obszar dla contentu strony</td>
+                                        </tr>
+                                        <tr>
+                                            <td>aside</td>
+                                            <td>Definiuje boczny obszar strony, np na pionowe menu, ostatnie wpisy etc.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>section</td>
+                                            <td>Definiuje sekcje, tematyczne kontenery dla pozostałych div-ów składających się na komponent (sekcję).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>article</td>
+                                            <td>Definiuje obszar dla artykułu, krótkiej sekcji czy elementu ( newsa jak w wordpress ).</td>
+                                        </tr>
+                                        <tr>
+                                            <td>figure</td>
+                                            <td>Definiuje element typu figure ;) przeważnie jest to zdjęcie.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>footer</td>
+                                            <td>Definiuje obszar przeznaczony na stopkę strony.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div> 
                         </div>
                     </section>
                 </div>
             </div>
-        </div>
-    </section>
 
     <div id="goUp" class="hideMe">
         <i class="fas fa-angle-double-up fa-3x"></i>
