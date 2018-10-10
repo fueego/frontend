@@ -103,7 +103,7 @@
                             <div class="dropdown">
                                 <a class="nav-link text-secondary" data-toggle="dropdown">Serwis WWW</a>
                                 <div class="dropdown-menu">
-                                    <div class="dropdown-item"><a href="#" class="text-secondary">Konfiguracja środowiska</a></div>
+                                    <div class="dropdown-item"><a href="konfiguracja.html" class="text-secondary">Konfiguracja środowiska</a></div>
                                 </div>
                             </div>
                         </li>
@@ -336,10 +336,15 @@ p {
                                 </ul>
 
                                 <pre class="my-3"><code>
+&lt;!-- [data-parent$='fundamentals'] -->
 &lt;div id="collapseOne" class="collapse show" data-parent="#fundamentals">&lt;/div>
+&lt;!-- input[type=text] -->
 &lt;input type="text" class="form-control" name="userName" required>
+&lt!-- [class|=top] -->
 &lt;p class="top-border">&lt;/p>
+&lt!-- [title~=xyz] -->
 &lt;img src="./xx/yy/zz.jpg" alt="some image" title="innaKlasa xyz yyy">
+&lt;!-- [class*="Dlu"] -->
 &lt;div class="bardzo Dluga Klasa">Some text&lt;/div>
                                     </code></pre>
 
@@ -507,6 +512,9 @@ p {
                                             <li class="list-group-item">
                                                 <span class="text-info">sticky (props experymentalny, należy sprawdzać przeglądarkę, z którą będziemy go używać)</span> : 
                                                 element jest traktowany jak normalny relatywny element, do momentu kiedy nie osiągnie górnej bariery przeglądarki, lub elementu scrollowanego, w którym jest umieszczony.
+                                                <p>
+                                                    <a href="https://codepen.io/dudleystorey/pen/yNxPRy">Przykład dla lepszego zobrazowania</a>
+                                                </p>
                                             </li>
                                         </ul>
                                     </div>
@@ -699,7 +707,7 @@ p {
 .button {
     color: red;
     font-size: 10;
-    background: orange !imporant; /* znacznik !important ma wyższy priorytet*/
+    background: orange !important; /* znacznik !important ma wyższy priorytet*/
 }
 
 #mainMenu .subMenu .button {
@@ -727,7 +735,9 @@ a {
     color: #00ffee
 }
                                         </code></pre>
-
+                                        <p>
+                                            <a href="https://specificity.keegan.st/">Kalkulator CSS - automat</a>
+                                        </p>
                                         <p>Jeżeli zdaży się, że mamy selektory elementów z taką samą iloscią punktów, przypisany zostanie ten styl, który był renderowany pózniej</p>
                                     </li>
 
@@ -1001,8 +1011,8 @@ span {
 &lt;section class="loginComponent">
     &lt;input class="loginComponent__input" type="text" />
     &lt;input class="loginComponent__input loginComponent__input--passwd" type="password"/>
-    &lt;button class="loginComponent_button" type="button">Cancel&lt;/button>
-    &lt;button class="loginComponent_button loginComponent_button--submit" type="submit">Submit&lt;/button>
+    &lt;button class="loginComponent__button" type="button">Cancel&lt;/button>
+    &lt;button class="loginComponent__button loginComponent__button--submit" type="submit">Submit&lt;/button>
 &lt;/section>
                                 </code></pre>
 
