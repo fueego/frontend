@@ -26,6 +26,16 @@ body {
         }
     }
 
+    .carousel {
+        max-height: 550px;
+        overflow: hidden;
+    
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        }
+    }
+
     /* style for code highlight */
     pre > code {
         margin: 0px;
