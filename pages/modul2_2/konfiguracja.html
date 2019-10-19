@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/railscasts.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Szkolenie Front-End</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a href="../../index.html" class="navbar-brand">Hello Front-End</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="../modul1/modul1.html" class="nav-link">MODUŁ1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../modul2/modul2.html" class="nav-link">MODUŁ2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">MODUŁ2_2</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                <i class="far fa-arrow-alt-circle-down"></i> PLIKI POMOCNICZE
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="../modul1/konfiguracja.html" class="dropdown-item">Moduł1 - HTML/STYLE</a>
+                                <a href="./konfiguracja.html" class="dropdown-item">Moduł2 - BOOTSTRAP/JS</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="nav rounded border mainMenu bg-white">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Podstawy JS</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item">
+                                        <a href="./modul2_2.html#podstawy" class="text-secondary">Vanilla JS wprowadzenie</a>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="dropdown-item">
+                                        <a href="./modul2_2.html#zmienneIzakresy" class="text-secondary">Zmienne i zakresy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link text-secondary" data-toggle="dropdown">Serwis WWW</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item"><a href="konfiguracja.html" class="text-secondary">Konfiguracja
+                                            środowiska</a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-2 pt-5">
+                <div class="col">
+                    <section>
+                        <h4 class="pl-2">Konfiguracja</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>
+                                    Przed tym, jak zaczniemy pracę nad projektem musimy przygotować pliki startowe.
+                                </p>
+    
+                                <p>
+                                    Dostępne pliki znajdują się na <a href="https://github.com/fueego/frontend_2_2">github</a>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="goUp" class="hideMe">
+        <i class="fas fa-angle-double-up fa-3x"></i>
+    </div>
+
+    <script src="../../js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="../../js/vendor/popper.min.js"></script>
+    <script src="../../js/vendor/bootstrap.min.js"></script>
+    <script src="../../js/vendor/highlight.pack.js"></script>
+    <script src="../../js/general.js"></script>
+</body>
+
+</html>
