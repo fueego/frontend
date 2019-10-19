@@ -78,6 +78,9 @@
                                     <div class="dropdown-item">
                                         <a href="./modul2_2.html#scope" class="text-secondary">Scope chain</a>
                                     </div>
+                                    <div class="dropdown-item">
+                                        <a href="./modul2_2.html#this" class="text-secondary">This</a>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -352,6 +355,102 @@ function withoutLexicalScopeConnection() {
                             <p class="my-3">
                                 Dodatkowo co ważne, zakres rodzica nie widzi zmiennych, funkcji swoich dzieci. Żeby mieć dostęp do zmiennych lub funkcji funkcji zagnieżdżonych w funkcjach lokalnych, funkcja lokalna musi zwrócić daną własność
                             </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row mt-2 pt-5" id="this">
+                <div class="col">
+                    <section>
+                        <h4 class="pl-2">This</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                
+                                <p class="my-3">
+                                    <span class="text-info">This</span> - Jeśli w kodzie użyjemy słowa kluczowego this poza jakąkolwiek funkcją, to zawsze będzie ono wskazywało na obiekt hosta — window.
+                                    Podobnie jest w przypadku, gdy wywołasz funkcję bezpośrednio przez referencję do niej — this wskazuje w takiej sytuacji na obiekt window:
+                                </p>
+<pre>
+    <code>
+function fun() {
+    return this;
+};
+
+fun(); // === window
+    </code>
+</pre>
+                                <p class="my-3">
+                                    Jednym z prostszych sposobów zaobserwowania zmiany this jest wywołanie console.log z innego obiektu.
+                                </p>
+<pre>
+    <code>
+
+        this.myName = 'Window';
+
+        const myObj = {
+            myName: 'Jakub',
+            showLocalThis: function() {
+                console.log(this.myName);
+            },
+            showUpperContext: () => {
+                console.log(this.myName);
+            },
+            showWindowContext: function() {
+                function test() {
+                    // każda regularna funkcja, która nie jest metodą wskazuje na obiekt window...
+                    console.log(this.myName);
+                };
+
+                test();
+            }
+        }
+
+        myObj.showLocalThis();
+        myObj.showUpperContext();
+        myObj.showWindowContext();
+
+    </code>
+</pre>
+                                <p class="my-3">
+                                    Wywołanie obiektu z zmienionym kontekstem
+                                </p>
+<pre>
+    <code>
+    // normalne wywolanie
+    const myObj = {
+        name: 'Moje super imie',
+        age: 32,
+        pokazDane(arg) {
+            console.log(this.name, 'w wieku', this.age, ' a to : ', arg);
+        }
+    }
+
+    myObj.pokazDane('super argument');
+
+    // update na kontekst
+    const update = {
+        name: 'Marian',
+        age: 20,
+    }
+
+    myObj.pokazDane.call(update, 'ekstra argument');
+
+    // update na kontekst z apply
+    myObj.pokazDane.apply({age: 100, name: 'Inspector gadget'}, ['roznica w przekazywaniu argumentow'])
+
+    // na koniec jeszcze bind
+    myObj.pokazDane.bind({age: 200, name: 'Super old'})('Jako ostatni bind...');
+
+    </code>
+</pre>
+
+                                <div class="alert alert-warning" role="alert">
+                                    Ważne: Funkcje strzałkowe nie dają możliwości nadpisania this w jakikolwiek sposób — ostatecznie zawsze zostaną wykonane z tym oryginalnym.
+                                    Co ciekawe, jest to zasada tak restrykcyjna, że wywołanie arrow function jako konstruktora kończy się błędem.
+                                </div>
+
                             </div>
                         </div>
                     </section>
