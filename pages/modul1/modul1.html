@@ -442,6 +442,10 @@ p {
                                 <div class="bg-light my-3" style="border: 20px solid #dedede; width: 300px; height: 200px; padding: 30px; box-sizing: border-box">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, eos?
                                 </div>
+
+                                <div class="alert alert-warning" role="alert">
+                                    Dla uzupełnienia wiedzy jest jeszcze <strong>"padding-box"</strong> ale nie miałem z nim nigdy doświadczenia.
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -461,7 +465,7 @@ p {
 
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        Elementami liniowymi są <span class="text-info">&lt;a>, &lt;span>, &lt;em>, &lt;i>, &lt;img>, &lt;strong></span>
+                                        Elementami liniowymi są <span class="text-info">&lt;a>, &lt;b>, &lt;span>, &lt;em>, &lt;i>, &lt;img>, &lt;strong></span>
                                     </li>
                                 </ul>
 
@@ -471,7 +475,7 @@ p {
 
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        Elementy blokowe <span class="text-info">&lt;h1 - h6>, &lt;div>, &lt;p>, &lt;ul></span>
+                                        Elementy blokowe <span class="text-info">&lt;h1 - h6>, &lt;div>, &lt;p>, &lt;ul>, &lt;li>, &lt;ol></span>
                                     </li>
                                 </ul>
                             </div>
@@ -768,7 +772,7 @@ section {
 }
 
 span {
-    width: 200px;
+    display: block;
     background: yellow;
 }
 
@@ -834,23 +838,6 @@ span {
                                 <hr>
 
                                 <p>Przykład troszkę bardziej skomplikowanej animacji</p>
-
-                                <pre><code>
-@keyframes mojaAnimacja {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: .8;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-                                </code></pre>
-
 
                                 <div class="animowanyElement2">
                                     <div class="animowanyBox"></div>
